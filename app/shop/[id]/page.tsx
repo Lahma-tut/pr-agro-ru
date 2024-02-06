@@ -3,8 +3,34 @@ import styles from "./page.module.css";
 import { Suspense } from "react";
 import Analog from "@/components/aside/analog/Analog";
 import { prisma } from "@/lib/data";
-import { Card } from "@/components/card/Card";
+import Atributes from "@/components/card/item/Atributes";
+import Price from "@/components/card/item/Price";
+import Image from "next/image";
 
+export const Card = ({ data }: any) => {
+  return (
+    <section className={styles.cart}>
+      <div className={styles.features}>
+         <div className={styles.image}>
+          <Image src="/korsar-super-vrk-10l.jpeg" 
+            alt="korsar-super-vrk-10l" 
+            width={600} 
+            height={600} />
+         </div>
+         <div className={styles.desc}>
+          <div>{ data.description }</div>
+          <Atributes />
+          <Price />
+          </div>
+      </div>
+      <div className={styles.benefits}>
+        <p>
+          Основной текст
+        </p>
+        </div>
+    </section>
+  )
+};
 
 const Content = async ({id}: {id: string}) => {
   const data = await prisma.product.findUnique({
