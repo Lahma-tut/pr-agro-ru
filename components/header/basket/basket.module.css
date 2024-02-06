@@ -1,0 +1,21 @@
+.link {
+  font-size: 1rem;
+  font-weight: 500;
+  transition: color 0.5s ease-out;
+  color: var(--green-color);
+}
+
+.link:hover {
+  color: var(--orange-color);
+}
+
+.icon_basket {
+  font-size: 25px;
+  cursor: pointer;
+  color: var(--green-color);
+  transition: color 0.3s ease-out;
+}
+
+.icon_basket:hover {
+  color: var(--orange-color);
+}

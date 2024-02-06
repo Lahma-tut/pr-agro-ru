@@ -1,0 +1,11 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.button {
+  width: 100px;
+  padding: 11px;
+  cursor: pointer;
+  border: 2px solid var(--text-color);
+}

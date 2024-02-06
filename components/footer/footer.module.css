@@ -1,0 +1,67 @@
+.footer {
+  background: var(--linear-gradient);
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  padding: 44px 22px 22px;
+  color: var(--grey-color);
+  max-width: var(--max-width);
+  margin: var(--margin);
+}
+
+.top {
+  display: flex;
+  gap: 44px;
+}
+
+.top p {
+  font-size: 15px;
+  line-height: 150%;
+}
+
+.top h5 {
+  font-weight: 500;
+  font-size: 18px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.about {
+  display: flex;
+  flex-direction: column;
+  gap: 11px; 
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+  flex: 1 0 38%;
+}
+
+.mail, .tel {
+  display: flex;
+  gap: 11px;
+  align-items: center;
+  font-weight: 400;
+}
+
+.mail {
+  margin: 0 0 6px 0;
+}
+
+.bottom {
+  display: flex;
+  justify-content: space-between;
+  padding: 11px 0 0 0;
+  border-top: 2px solid var(--grey-color);
+
+}
+
+.bottom p {
+  font-size: 14px;
+  letter-spacing: 0.5px;
+}

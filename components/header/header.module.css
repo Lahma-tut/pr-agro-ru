@@ -1,0 +1,11 @@
+.header {
+  display: flex;
+  gap: 33px;
+  width: 100%;
+  height: 133px;
+  align-items: center;
+  justify-content: space-between;
+  max-width: var(--max-width);
+  margin: var(--margin);
+  padding: var(--padding);
+}

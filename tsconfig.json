@@ -21,6 +21,6 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "app/api/hello/route.js", "app/api/category/route.js", "app/shop/layout.jsx", "components/breadcrumbs/Breadcrumbs.jsx"],
   "exclude": ["node_modules"]
 }

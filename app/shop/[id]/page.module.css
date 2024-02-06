@@ -1,0 +1,31 @@
+/* PAGE */
+.container {
+  display: flex;
+  gap: 22px;
+  margin: 0 0 44px 0;
+}
+
+.body {
+  flex: 4;
+}
+
+.aside {
+  flex: 1;
+}
+
+.link {
+  font-size: 0.97rem;
+  font-weight: 300;
+  line-height: 186%;
+  text-wrap: pretty;
+
+  text-underline-offset: 4px;
+  text-decoration: revert;
+  text-decoration-color: #c9c9c9;
+  transition: color 0.3s ease-out;
+}
+
+.link:hover {
+  color: var(--orange-color);
+}
+

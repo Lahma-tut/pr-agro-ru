@@ -1,0 +1,52 @@
+.price  {
+  display: flex;
+  gap: 11px;
+}
+
+.price ul {
+  display: flex;
+  gap: 11px;
+}
+
+.price h6 {
+  font-size: 0.95rem;
+  min-width: 155px;
+  font-weight: 500;
+  color: var(--atributes-color);
+}
+
+.basic, .basic-package {
+  font-weight: 400;
+  color: var(--green-color);
+}
+
+.discount, .discount-package {
+  font-weight: 400;
+  color: var(--orange-color);
+}
+
+
+.basic::after {
+  font-size: 0.9rem;
+  content: ' \20BD';
+}
+.basic-package::after {
+  font-size: 0.9rem;
+  content: ' \20BD';
+}
+.discount::after {
+  font-size: 0.9rem;
+  content: ' \20BD';
+}
+.discount-package::after {
+  font-size: 0.9rem;
+  content: ' \20BD';
+}
+.ruble::after::after {
+  font-size: 0.9rem;
+  content: ' \20BD';
+}
+
+.info {
+  font-size: 0.95rem;
+}

@@ -1,0 +1,22 @@
+.box {
+  height: 36px;
+  background-color: var(--grey-color);
+}
+
+.row {
+  display: flex;
+  gap: 11px;
+  height: 100%;
+  align-items: center;
+  justify-content: space-between;
+  max-width: var(--max-width);
+  margin: var(--margin);
+  padding: var(--padding);
+}
+
+.row li {
+  font-size: .8rem;
+  line-height: 126%;
+  text-wrap: pretty;
+  letter-spacing: 0.5px;
+}

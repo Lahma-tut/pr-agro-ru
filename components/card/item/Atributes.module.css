@@ -1,0 +1,44 @@
+.atributes  {
+    display: flex;
+    gap: 11px;
+    font-size: 0.97rem;
+}
+
+.atributes li {
+    display: flex;
+    gap: 11px;
+}
+
+.atributes li a {
+    text-underline-offset: 4px;
+    text-decoration: revert;
+    text-decoration-color: #c9c9c9;
+    transition: color 0.3s ease-out;
+}
+
+.atributes li a:hover {
+    color: var(--orange-color);
+}
+
+.atributes h6 {
+    font-size: .95rem;
+    color: var(--atributes-color);
+    font-weight: 500;
+    min-width: 155px;
+}
+
+.ingredient {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.ingredient span {
+    min-width: 40px;
+}
+
+.culture, .harmful {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}

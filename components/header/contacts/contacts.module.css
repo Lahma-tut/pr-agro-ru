@@ -1,0 +1,17 @@
+.contacts {
+  justify-self: end;
+  cursor: pointer;
+}
+
+.mail {
+  font-size: 17px;
+  font-weight: 400;
+  margin-bottom: 2px;   
+  color: var(--orange-color);
+}
+
+.tel {
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--green-color);
+}
