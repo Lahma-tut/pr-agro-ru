@@ -1,8 +1,8 @@
 import styles from "./page.module.css";
 import { Suspense } from "react";
-import Analog from "@/components/aside/analog/Analog";
 import { prisma } from "@/lib/data";
 import { Metadata, ResolvingMetadata } from "next";
+import Analog from "@/components/aside/analog/Analog";
 import Atributes from "@/components/card/item/Atributes";
 import Price from "@/components/card/item/Price";
 import Image from "next/image";
@@ -33,7 +33,7 @@ export async function generateMetadata(
 };
 
 // Отображение данных о товаре
-export const Card = ({ product }: any) => {
+const Card = ({ product }: any) => {
   return (
     <section className={styles.cart}>
       <div className={styles.features}>
