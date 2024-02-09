@@ -62,7 +62,7 @@ export const Card = ({ product }: any) => {
   )
 };
 
-// Траница товара
+// Cтраница товара
 export default async function Page({ params }: Props) {
   const product = await prisma.product.findUnique({
     where: { 
