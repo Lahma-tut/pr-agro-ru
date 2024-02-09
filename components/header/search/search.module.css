@@ -1,4 +1,4 @@
-.form {
+/* .form {
   flex: 1 0 auto;
   display: flex;
   position: relative;
@@ -12,7 +12,8 @@
 }
 
 .input::placeholder {
-  font-size: 15px;
+  font-size: 0.96rem;
+  font-weight: 300;
 }
 
 
@@ -22,4 +23,47 @@
   left: 10px;
   font-size: 16px;
   cursor: pointer;
+} */
+
+
+
+.form {
+  flex: 1 0 auto;
+  position: relative;
+}
+
+.input {
+  width: 100%;
+  height: 40px;
+  padding-left: 10px;
+  border: 2px solid var(--orange-color);
+  border-radius: 2px;
+  outline: none;
+}
+
+.input::placeholder {
+  font-size: 0.96rem;
+  /* font-weight: 300; */
+}
+
+.button {
+  position: absolute; 
+  top: 0;
+  right: 0px;
+  width: 62px;
+  height: 40px;
+  border: none;
+  background: var(--linear-gradient);
+  border-radius: 0 2px 2px 0;
+  cursor: pointer;
+  color: white;
+}
+
+.button:hover {
+  background: var(--linear-gradient-hover);
+}
+
+
+.icon_glass {
+  font-size: 19px;
 }

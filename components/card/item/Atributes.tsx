@@ -1,13 +1,22 @@
 import styles from './Atributes.module.css';
+import Link from 'next/link';
 
-export default function Atributes() {
+export default async function Atributes({ ingredient, packing, manufacturer }: any) {
+    
     return (
         <>
         <section className={styles.atributes}>
             <h6>Состав:</h6>
             <ul className={styles.ingredient}>
-                <li><span>49 г/л</span><a href="#">Клоквинтосет-мексил</a></li>
-                <li><span>70 г/л</span><a href="#">Феноксапроп-П-этил</a></li>
+                {
+                    ingredient.map((ingredient: any) => (
+                        <li key={ingredient.id}>
+                            <Link href={`/catalog/tags/${ingredient.slug}`}>
+                                { ingredient.title }
+                            </Link>
+                        </li>
+                    ))
+                }
                 </ul>
         </section>
         <section className={styles.atributes}>
@@ -32,13 +41,15 @@ export default function Atributes() {
         <section className={styles.atributes}>
             <h6>Производитель:</h6>
             <ul className={styles.manufacturer}>
-                <li><a href="#">Avgust</a></li>
+                <li><a href="#">
+                    { manufacturer.map((m: any) => (m.title))}
+                    </a></li>
             </ul>
         </section>
         <section className={styles.atributes}>
             <h6>Упаковка:</h6>
             <ul className={styles.package}>
-                <li>5 л</li>
+                <li>{ packing.map((p: any) => (p.title))}</li>
             </ul>
         </section>
         </>                  

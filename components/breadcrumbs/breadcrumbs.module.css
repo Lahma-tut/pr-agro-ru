@@ -13,11 +13,23 @@
   max-width: 633px;
 }
 
-.heading {
-  font-size: 33px;
+.h1 {
+  font-size: 2rem;
   font-weight: 600;
   text-transform: uppercase;
   color: var(--green-color);
+}
+
+.h2 {
+  font-size: 1rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: var(--green-color);
+  transition: color 0.1s ease-out;
+  /* background-color:var(--orange-color);
+  background-image: linear-gradient(to left,#ff8803,#319419);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; */
 }
 
 .link {
@@ -28,31 +40,22 @@
 }
 
 .icon {
-  font-size: 18px;
   color: var(--green-color);
   transition: color 0.1s ease-out;
 }
 
-.link h2 {
-  font-weight: 500;
-  text-transform: uppercase;
+.h2:hover {
   color: var(--orange-color);
-  background-color:var(--orange-color);
-  background-image: linear-gradient(to left,#ff8803,#319419);
+  /* background-color:var(--orange-color); */
+  /* background-image: linear-gradient(to right,#ff8803,#319419);
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.link:hover h2 {
-  background-color:var(--orange-color);
-  background-image: linear-gradient(to right,#ff8803,#319419);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  -webkit-text-fill-color: transparent; */
 }
 
 .link:hover .icon, .link:hover h2 {
   color: var(--orange-color);
 }
+
 
 
 /* media */

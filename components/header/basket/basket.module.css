@@ -10,7 +10,7 @@
 }
 
 .icon_basket {
-  font-size: 25px;
+  font-size: 28px;
   cursor: pointer;
   color: var(--green-color);
   transition: color 0.3s ease-out;

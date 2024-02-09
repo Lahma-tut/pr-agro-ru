@@ -8,7 +8,7 @@ import Header from "@/components/header/Header";
 
 const rubik = Rubik({ 
   subsets: ["cyrillic"],
-  weight: "variable"
+  // weight: "variable"
 });
 
 export const metadata: Metadata = {

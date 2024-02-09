@@ -17,20 +17,36 @@ model Product {
   title         String
   description   String
   price         Float
+  manufacturer  Manufacturer[]
+  packing       Packing[]
   category      Category[]
-  tags          Tag[]
+  ingredient    Ingredient[]
 }
 
 model Category {
   id            Int  @id @default(autoincrement())
-  catSlug       String  @unique
+  slug          String  @unique
   title         String
   product       Product[]
 }
 
-model Tag {
+model Ingredient {
   id            Int  @id @default(autoincrement())
-  tagSlug       String  @unique
+  slug          String  @unique
+  title         String
+  product       Product[]
+}
+
+model Manufacturer {
+  id            Int  @id @default(autoincrement())
+  slug          String  @unique
+  title         String
+  product       Product[]
+}
+
+model Packing {
+  id            Int  @id @default(autoincrement())
+  slug          String  @unique
   title         String
   product       Product[]
 }
