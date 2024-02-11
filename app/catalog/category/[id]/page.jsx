@@ -1,40 +1,31 @@
 import { prisma } from "@/lib/data";
-import styles from "./page.module.css";
-import { Metadata, ResolvingMetadata } from "next";
+import styles from "@/app/catalog/page.module.css";
 import Filter from "@/components/aside/filter/Filter";
 import { Suspense } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import Breadcrumbs from "@/components/breadcrumbs/Breadcrumbs";
 
-// TS
-type Props = {
-  params: { id: string }
-  searchParams: { [key: string]: string | string[] | undefined }
-}
-
 // Получение Metadata
-export async function generateMetadata(
-  { params, searchParams }: Props, patern: ResolvingMetadata
-  ): Promise<Metadata> {
-    
+export async function generateMetadata({ params, searchParams }) {
     const id = params.id;
 
-    const ingredient  = await prisma.ingredient.findUnique({
+    const category  = await prisma.category.findUnique({
       where: {
         slug: id
       }
     });
 
   return {
-    title: ingredient.title,
+    title: category.title,
   }
 };
 
-const CategoryProductsList = async ({products}: any) => {
+// Вывод категории с товаром
+const CategoryProductsList = async ({ products }) => {
   return (
     <section > 
-      {products.map((product: any)=> (
+      { products.map((product) => (
       <Link 
         key={product.id}
         href={`/catalog/${product.slug}`}
@@ -57,9 +48,9 @@ const CategoryProductsList = async ({products}: any) => {
   )
 };
  
-export default async function Page({ params }: {params:{ id: string }}) {
-
-  const ingredient = await prisma.ingredient.findUnique({
+// Страница категорий
+export default async function Page({ params, searchParams }) {
+  const category = await prisma.category.findUnique({
     where: {
       slug: params.id
     },
@@ -69,12 +60,10 @@ export default async function Page({ params }: {params:{ id: string }}) {
     }
   })
 
-  console.log("Страница category:", ingredient)
-
   return (
     <section>
       <div className={styles.breadcrumbs}>
-        <Breadcrumbs h1={ ingredient.title } h2="Каталог" />
+        <Breadcrumbs h1={ category.title } h2="Каталог" />
       </div>
     <div className={styles.container}>
       <aside className={styles.aside}>
@@ -82,7 +71,7 @@ export default async function Page({ params }: {params:{ id: string }}) {
       </aside>
     <div className={styles.body}>
       <Suspense fallback={"Loading..."}>
-        <CategoryProductsList products={ ingredient.product }/>
+        <CategoryProductsList products={ category.product }/>
       </Suspense>
     </div>
     </div>

@@ -18,13 +18,13 @@
 }
 
 .top p {
-  font-size: 15px;
+  font-size: 0.96rem;
   line-height: 150%;
 }
 
 .top h5 {
+  font-size: 1.3rem;
   font-weight: 500;
-  font-size: 18px;
   letter-spacing: 0.5px;
   text-transform: uppercase;
 }
@@ -62,6 +62,6 @@
 }
 
 .bottom p {
-  font-size: 14px;
+  font-size: 0.9rem;
   letter-spacing: 0.5px;
 }

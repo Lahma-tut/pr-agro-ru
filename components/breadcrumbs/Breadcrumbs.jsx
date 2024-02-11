@@ -3,7 +3,7 @@ import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 
-export default function Breadcrumbs({ h1, h2 }: any) {
+export default function Breadcrumbs({ h1, h2 }) {
   return (
       <section className={styles.breadcrumb}>
         <div className={styles.box}>

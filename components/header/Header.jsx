@@ -1,4 +1,4 @@
-import styles from "./header.module.css";
+import s from "./header.module.css";
 import Logo from "./logo/Logo";
 import Search from "./search/Search";
 import Menu from "./menu/Menu";
@@ -7,7 +7,7 @@ import Basket from "./basket/Basket";
 
 export default function Header() {
   return (
-    <header className={styles.header}>
+    <header className={s.header}>
       <Logo />
       <Search />
       <Menu />

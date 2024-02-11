@@ -1,7 +1,7 @@
 import styles from './Atributes.module.css';
 import Link from 'next/link';
 
-export default async function Atributes({ ingredient, packing, manufacturer }: any) {
+export default async function Atributes({ ingredient, manufacturer, packing }) {
     
     return (
         <>
@@ -9,9 +9,9 @@ export default async function Atributes({ ingredient, packing, manufacturer }: a
             <h6>Состав:</h6>
             <ul className={styles.ingredient}>
                 {
-                    ingredient.map((ingredient: any) => (
+                    ingredient.map((ingredient) => (
                         <li key={ingredient.id}>
-                            <Link href={`/catalog/tags/${ingredient.slug}`}>
+                            <Link href={`/catalog/ingredient/${ingredient.slug}`}>
                                 { ingredient.title }
                             </Link>
                         </li>
@@ -42,14 +42,14 @@ export default async function Atributes({ ingredient, packing, manufacturer }: a
             <h6>Производитель:</h6>
             <ul className={styles.manufacturer}>
                 <li><a href="#">
-                    { manufacturer.map((m: any) => (m.title))}
+                    { manufacturer.map((m) => (m.title))}
                     </a></li>
             </ul>
         </section>
         <section className={styles.atributes}>
             <h6>Упаковка:</h6>
             <ul className={styles.package}>
-                <li>{ packing.map((p: any) => (p.title))}</li>
+                <li>{ packing.map((p) => (p.title))}</li>
             </ul>
         </section>
         </>                  

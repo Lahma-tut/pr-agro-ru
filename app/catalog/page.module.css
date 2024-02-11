@@ -13,15 +13,8 @@
   flex: 1;
 }
 
-.h1 {
-  font-size: 2rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  color: var(--green-color);
-}
-
 .link {
-  font-size: .97rem;
+  font-size: 1rem;
   font-weight: 300;
   line-height: 186%;
   text-wrap: pretty;
@@ -55,26 +48,26 @@
   flex: 6;
 }
 
+.h3 {
+  font-size: 1.2rem;
+  font-weight: 500;
+  line-height: 166%;
+  color: var(--green-color);
+}
+
+.desc {
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 150%;
+  text-wrap: pretty;
+}
+
 .price {
   flex: 1;
   align-self: center;
   text-align: right;
   font-weight: 400;
   color: var(--orange-color);
-}
-
-.desc {
-  font-size: .97rem;
-  font-weight: 300;
-  line-height: 150%;
-  text-wrap: pretty;
-}
-
-.h3 {
-  font-size: 1.1rem;
-  font-weight: 500;
-  line-height: 166%;
-  color: var(--green-color);
 }
 
 .price::after {

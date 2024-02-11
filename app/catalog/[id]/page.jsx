@@ -8,17 +8,8 @@ import Price from "@/components/card/item/Price";
 import Image from "next/image";
 import Breadcrumbs from "@/components/breadcrumbs/Breadcrumbs";
 
-// TS
-type Props = {
-  params: { id: string }
-  searchParams: { [key: string]: string | string[] | undefined }
-}
-
 // Получение Metadata
-export async function generateMetadata(
-  { params, searchParams }: Props, patern: ResolvingMetadata
-  ): Promise<Metadata> {
-    
+export async function generateMetadata({ params, searchParams }) {
     const id = params.id;
 
     const product  = await prisma.product.findUnique({
@@ -32,8 +23,9 @@ export async function generateMetadata(
   }
 };
 
+
 // Отображение данных о товаре
-const Card = ({ product }: any) => {
+const Card = ({ product }) => {
   return (
     <section className={styles.cart}>
       <div className={styles.features}>
@@ -63,7 +55,8 @@ const Card = ({ product }: any) => {
 };
 
 // Cтраница товара
-export default async function Page({ params }: Props) {
+
+export default async function Page({ params }) {
   const product = await prisma.product.findUnique({
     where: { 
       slug: params.id 
@@ -75,7 +68,6 @@ export default async function Page({ params }: Props) {
       ingredient:   true
     }
   });
-  console.log("Страница product:", product)
 
   return (
     <section className={styles.content}>
