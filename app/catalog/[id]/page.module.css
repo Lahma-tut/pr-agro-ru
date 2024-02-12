@@ -13,22 +13,6 @@
   flex: 1;
 }
 
-.link {
-  font-size: 0.97rem;
-  font-weight: 300;
-  line-height: 186%;
-  text-wrap: pretty;
-
-  text-underline-offset: 4px;
-  text-decoration: revert;
-  text-decoration-color: #c9c9c9;
-  transition: color 0.3s ease-out;
-}
-
-.link:hover {
-  color: var(--orange-color);
-}
-
 /* CARD */
 .features {
   display: flex;
@@ -44,11 +28,14 @@
   display: flex;
   flex-direction: column;
   gap: 18px;
+
+  font-size: var(--font-text);
   font-weight: 300;
-  line-height: 150%;
+  line-height: 136%;
   text-wrap: pretty;
 }
 
 .benefits {
-  font-size: 0.97rem;
+  font-size: var(--font-text);
+  font-weight: 300;
 }

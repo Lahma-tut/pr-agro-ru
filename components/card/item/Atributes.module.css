@@ -1,12 +1,13 @@
 .atributes  {
     display: flex;
     gap: 11px;
-    font-size: 0.97rem;
+
 }
 
 .atributes li {
     display: flex;
     gap: 11px;
+    font-size: var(--font-text);
 }
 
 .atributes li a {

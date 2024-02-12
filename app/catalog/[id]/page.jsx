@@ -1,7 +1,6 @@
 import styles from "./page.module.css";
 import { Suspense } from "react";
 import { prisma } from "@/lib/data";
-import { Metadata, ResolvingMetadata } from "next";
 import Analog from "@/components/aside/analog/Analog";
 import Atributes from "@/components/card/item/Atributes";
 import Price from "@/components/card/item/Price";
