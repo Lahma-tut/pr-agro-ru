@@ -1,4 +1,4 @@
-import styles from "./page.module.css";
+import s from "./page.module.css";
 import { Suspense } from "react";
 import { prisma } from "@/lib/data";
 import Analog from "@/components/aside/analog/Analog";
@@ -26,15 +26,15 @@ export async function generateMetadata({ params, searchParams }) {
 // Отображение данных о товаре
 const Card = ({ product }) => {
   return (
-    <section className={styles.cart}>
-      <div className={styles.features}>
-         <div className={styles.image}>
+    <section className={s.cart}>
+      <div className={s.features}>
+         <div className={s.image}>
           <Image src="/korsar-super-vrk-10l.jpeg" 
             alt="korsar-super-vrk-10l" 
             width={600} 
             height={600} />
          </div>
-         <div className={styles.desc}>
+         <div className={s.desc}>
           <div>{ product.description }</div>
           <Atributes 
             ingredient={ product.ingredient }
@@ -44,7 +44,7 @@ const Card = ({ product }) => {
           <Price />
           </div>
       </div>
-      <div className={styles.benefits}>
+      <div className={s.benefits}>
         <p>
           Основной текст
         </p>
@@ -69,15 +69,15 @@ export default async function Page({ params }) {
   });
 
   return (
-    <section className={styles.content}>
+    <section className={s.content}>
       <Breadcrumbs h1={ product.title } h2={ product.category[0].title }/>
-      <div className={styles.container}>
-      <div className={styles.body}>
+      <div className={s.container}>
+      <div className={s.body}>
         <Suspense fallback={"Loading..."}>
           <Card product={ product }/>
         </Suspense>
         </div>
-      <aside className={styles.aside}>
+      <aside className={s.aside}>
         <Analog />
         </aside>
       </div>
