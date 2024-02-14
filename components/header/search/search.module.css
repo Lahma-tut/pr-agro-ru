@@ -1,34 +1,4 @@
-/* .form {
-  flex: 1 0 auto;
-  display: flex;
-  position: relative;
-  border-radius: 3px;
-  border: 2px solid var(--orange-color);
-}
-
-.input {
-  width: 100%;
-  padding: 10px 10px 10px 36px;
-}
-
-.input::placeholder {
-  font-size: 0.96rem;
-  font-weight: 300;
-}
-
-
-.icon_glass {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  font-size: 16px;
-  cursor: pointer;
-} */
-
-
-
 .form {
-  flex: 1 0 auto;
   position: relative;
 }
 

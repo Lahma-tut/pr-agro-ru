@@ -1,0 +1,23 @@
+.home {
+  font-size: var(--font-text);
+  font-weight: 300;
+}
+
+.home_item {
+  padding: 30px 0;
+}
+
+.link {
+  font-size: var(--font-text);
+  font-weight: 300;
+  line-height: 186%;
+  text-wrap: pretty;
+  text-underline-offset: 4px;
+  text-decoration: revert;
+  text-decoration-color: #c9c9c9;
+  transition: color 0.3s ease-out;
+}
+
+.link:hover {
+  color: var(--orange-color);
+}

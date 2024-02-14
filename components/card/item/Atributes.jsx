@@ -40,17 +40,18 @@ export default async function Atributes({ ingredient, manufacturer, packing }) {
         </section>
         <section className={styles.atributes}>
             <h6>Производитель:</h6>
-            <ul className={styles.manufacturer}>
-                <li><a href="#">
-                    { manufacturer.map((m) => (m.title))}
-                    </a></li>
-            </ul>
+            <div className={styles.manufacturer}>
+                    <a href="#">
+                        { manufacturer.map((m) => (m.title))}
+                        </a>
+
+            </div>
         </section>
         <section className={styles.atributes}>
             <h6>Упаковка:</h6>
-            <ul className={styles.package}>
-                <li>{ packing.map((p) => (p.title))}</li>
-            </ul>
+            <div className={styles.package}>
+                { packing.map((p) => (p.title))}
+            </div>
         </section>
         </>                  
     )

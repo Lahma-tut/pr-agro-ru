@@ -1,4 +1,23 @@
 .menu {
+  justify-self: center;
+}
+
+.icon_menu {
+  font-size: 28px;
+  color: var(--green-color);
+  transition: color 0.5s ease-out;
+}
+
+.icon_menu:hover {
+  color: var(--orange-color);
+}
+
+.icon_menu:focus {
+  color: var(--orange-color);
+}
+
+/* .menu {
+ 
   position: relative;
 }
 
@@ -68,4 +87,4 @@
 .button:focus .submenu {
   visibility: visible;
   opacity: 1;
-}
+} */

@@ -1,7 +1,8 @@
 .panel {
     display: flex;
     align-items: center;
-    width: 344px;
+    gap: 11px;
+    width: 100%;
 }
 
 .counter {
@@ -13,12 +14,11 @@
 .count {
     width: 50px;
     text-align: center;
-    padding: 11px;
     font-weight: 400;
 }
 
 .decrement, .increment {
-    padding: 11px 24px;
+    padding: 11px 22px;
     background: var(--grey-color);
 }
 

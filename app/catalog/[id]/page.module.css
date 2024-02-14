@@ -13,10 +13,12 @@
   flex: 1;
 }
 
+
 /* CARD */
 .features {
   display: flex;
   gap: 22px;
+  margin: 0 0 22px 0;
 }
 
 .image {
@@ -37,5 +39,15 @@
 
 .benefits {
   font-size: var(--font-text);
-  font-weight: 300;
+  font-weight: 300; 
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .features {
+    flex-direction: column;
+  }
 }

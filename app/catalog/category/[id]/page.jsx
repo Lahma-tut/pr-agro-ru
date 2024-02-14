@@ -47,6 +47,10 @@ const CategoryProductsList = async ({ products }) => {
     </section>
   )
 };
+
+function Loading() {
+  return <h2>🌀 Loading...</h2>;
+}
  
 // Страница категорий
 export default async function Page({ params, searchParams }) {
@@ -70,7 +74,7 @@ export default async function Page({ params, searchParams }) {
         <Filter />
       </aside>
     <div className={styles.body}>
-      <Suspense fallback={"Loading..."}>
+      <Suspense fallback={<Loading />}>
         <CategoryProductsList products={ category.product }/>
       </Suspense>
     </div>

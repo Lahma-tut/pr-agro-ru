@@ -65,3 +65,14 @@
   font-size: 0.9rem;
   letter-spacing: 0.5px;
 }
+
+
+@media screen and (max-width: 425px) {
+  .top {
+    flex-direction: column;
+  }
+  .bottom {
+    flex-direction: column;
+    gap: 11px;
+  }
+}

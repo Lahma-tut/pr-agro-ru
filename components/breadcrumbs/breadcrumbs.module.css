@@ -59,8 +59,16 @@
 
 
 /* media */
-@media (max-width: 900px) {
+@media screen and (max-width: 900px) {
   .breadcrumb {
       background: url(/banner-background.png) 355px -3px/auto auto no-repeat;
   }
+}
+
+
+@media screen and (max-width: 600px) {
+  .breadcrumb {
+    background: url(/banner-background.png) 111px -1px/auto auto no-repeat;
+  }
+  
 }

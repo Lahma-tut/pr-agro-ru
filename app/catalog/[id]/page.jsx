@@ -1,4 +1,4 @@
-import s from "./page.module.css";
+import styles from "./page.module.css";
 import { Suspense } from "react";
 import { prisma } from "@/lib/data";
 import Analog from "@/components/aside/analog/Analog";
@@ -10,7 +10,6 @@ import Breadcrumbs from "@/components/breadcrumbs/Breadcrumbs";
 // Получение Metadata
 export async function generateMetadata({ params, searchParams }) {
     const id = params.id;
-
     const product  = await prisma.product.findUnique({
       where: {
         slug: id
@@ -22,19 +21,18 @@ export async function generateMetadata({ params, searchParams }) {
   }
 };
 
-
 // Отображение данных о товаре
 const Card = ({ product }) => {
   return (
-    <section className={s.cart}>
-      <div className={s.features}>
-         <div className={s.image}>
+    <section className={styles.card}>
+      <div className={styles.features}>
+         <div className={styles.image}>
           <Image src="/korsar-super-vrk-10l.jpeg" 
             alt="korsar-super-vrk-10l" 
             width={600} 
             height={600} />
          </div>
-         <div className={s.desc}>
+         <div className={styles.desc}>
           <div>{ product.description }</div>
           <Atributes 
             ingredient={ product.ingredient }
@@ -44,9 +42,9 @@ const Card = ({ product }) => {
           <Price />
           </div>
       </div>
-      <div className={s.benefits}>
+      <div className={styles.benefits}>
         <p>
-          Основной текст
+          Здесь будет основной текст!
         </p>
         </div>
     </section>
@@ -69,15 +67,15 @@ export default async function Page({ params }) {
   });
 
   return (
-    <section className={s.content}>
+    <section className={styles.content}>
       <Breadcrumbs h1={ product.title } h2={ product.category[0].title }/>
-      <div className={s.container}>
-      <div className={s.body}>
+      <div className={styles.container}>
+      <div className={styles.body}>
         <Suspense fallback={"Loading..."}>
           <Card product={ product }/>
         </Suspense>
         </div>
-      <aside className={s.aside}>
+      <aside className={styles.aside}>
         <Analog />
         </aside>
       </div>

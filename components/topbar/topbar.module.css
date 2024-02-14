@@ -1,4 +1,4 @@
-.box {
+.topbar {
   height: 36px;
   background-color: var(--grey-color);
 }
@@ -19,4 +19,22 @@
   line-height: 126%;
   text-wrap: pretty;
   letter-spacing: 0.5px;
+}
+
+.hello {
+  opacity: 0;
+  padding: 10px;
+  font-size: 0.86rem;
+  line-height: 126%;
+  text-wrap: pretty;
+  letter-spacing: 0.5px;
+}
+
+@media (max-width: 860px) {
+  .row {
+    display: none;
+  }
+  .hello {
+    opacity: 1;
+  }
 }

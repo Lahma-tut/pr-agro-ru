@@ -1,8 +1,5 @@
-.link {
-  font-size: 1rem;
-  font-weight: 500;
-  transition: color 0.5s ease-out;
-  color: var(--green-color);
+.basket {
+  justify-self: center;
 }
 
 .link:hover {

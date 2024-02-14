@@ -1,6 +1,7 @@
 .contacts {
+  /* grid-area: contacts;
   justify-self: end;
-  cursor: pointer;
+  cursor: pointer; */
 }
 
 .mail {
@@ -14,4 +15,8 @@
   font-size: 18px;
   font-weight: 500;
   color: var(--green-color);
+}
+
+@media screen and (max-width: 425px) {
+
 }

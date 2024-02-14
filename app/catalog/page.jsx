@@ -29,6 +29,10 @@ async function CategoryList() {
   )
 };
 
+function Loading() {
+  return <h2>🌀 Loading...</h2>;
+}
+
 export default function Shop() {
   
   return (
@@ -39,7 +43,7 @@ export default function Shop() {
           <Filter />
           </aside>
         <div className={s.body}>
-          <Suspense fallback={"Loading..."}>
+          <Suspense fallback={<Loading />}>
             <CategoryList />
           </Suspense>
         </div>

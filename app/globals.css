@@ -3,7 +3,10 @@
   --margin: 0 auto;
   --padding: 0 22px;
   --font: 'Rubik', Helvetica, sans-serif;
-  --font-text: 0.99rem;
+  --font-text: 16px;
+  --font-atribute: 15px;
+  --font-price: 15px;
+  --font-info: 14px;
   --green-color: #319419;
   --orange-color: #ffa000;
   --white-color: #fff;
