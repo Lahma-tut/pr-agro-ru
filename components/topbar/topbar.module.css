@@ -24,11 +24,6 @@
 
 @media (max-width: 860px) {
   .topbar {
-    height: 2px;
-    background-color: var(--orange-color);
-  }
-
-  .row {
     display: none;
   }
 }

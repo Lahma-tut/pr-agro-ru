@@ -88,14 +88,14 @@
   .header {
     display: grid;
     grid-template: 1fr 1fr/ 5fr 1fr 1fr;
-    gap: 20px 11px;
+    gap: 30px 11px;
     align-items: center;
-    margin: 25px 0 25px 0;
+    margin: 30px 0 25px 0;
     width: 100%;
     padding: var(--padding);
   }
 
-.logo {
+  .logo {
     grid-column: 1 / 2;
     grid-row: 1 / 2;
   }
@@ -132,7 +132,7 @@
     grid-row: 1 / 2;
   }
 
-    .menu {
+  .menu {
     grid-column: 2 / 3;
     grid-row: 1 / 2;
 
@@ -169,7 +169,6 @@
   }
   
   .search {
-    
     grid-area: search;
   }
 
