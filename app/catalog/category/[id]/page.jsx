@@ -35,12 +35,14 @@ const CategoryProductsList = async ({ products }) => {
           </div>
         <div className={styles.content}>
           <h3 className={styles.h3}>{product.title}</h3>
-          <div className={styles.desc}>
-            {product.description}  
-          </div>
-          <div className={styles.price}>
-            {product.price}
+          <div className={styles.content_row}>
+            <div className={styles.desc}>
+              {product.description}  
             </div>
+            <div className={styles.price}>
+              {product.price}<span className={styles['rub']}>₽</span>
+              </div>
+          </div>
         </div>
       </Link>
       ))}

@@ -4,7 +4,7 @@ export default function Filter() {
   return (
     <div className={s.filter}>
       <details className={s.details}>
-        <summary className={s.summary}>Показать Фильтры</summary>
+        <summary className={s.summary}>Фильтр</summary>
       <section className={s.section}>
         <h4>Производитель</h4>
         <ul>

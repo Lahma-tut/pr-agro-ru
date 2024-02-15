@@ -23,6 +23,7 @@
 
 .section {
   margin: 0 0 22px 0;
+  padding: 0 0 0 11px;
 }
 
 .section:last-child {

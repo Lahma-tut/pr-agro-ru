@@ -11,7 +11,7 @@ export default function Header() {
     <header className={styles.header}>
       <div className={styles.logo}>
         <Link href="/">
-            <Image src={ logo } alt="logo" width={220} objectFit="cover"/>
+            <Image src={ logo } alt="logo" width={210} objectFit="cover"/>
           </Link>
       </div>
       <div className={styles.search}>
