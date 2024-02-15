@@ -15,6 +15,10 @@
 
 
 /* CARD */
+.card {
+  padding: var(--padding);
+}
+
 .features {
   display: flex;
   gap: 22px;

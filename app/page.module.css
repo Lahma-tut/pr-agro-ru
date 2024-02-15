@@ -1,6 +1,7 @@
 .home {
   font-size: var(--font-text);
   font-weight: 300;
+  padding: var(--padding);
 }
 
 .home_item {

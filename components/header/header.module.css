@@ -1,10 +1,10 @@
-.header {
+/* .header {
   width: 100%;
   margin: 20px 0 20px 0;
   max-width: var(--max-width);
   margin: var(--margin);
   padding: var(--padding);
-}
+} */
 
 /* .link:hover {
   color: var(--orange-color);
@@ -88,10 +88,11 @@
   .header {
     display: grid;
     grid-template: 1fr 1fr/ 5fr 1fr 1fr;
-    gap: 0px 11px;
+    gap: 20px 11px;
     align-items: center;
-    height: 110px;
-    margin: 20px 0 20px 0;
+    margin: 25px 0 25px 0;
+    width: 100%;
+    padding: var(--padding);
   }
 
 .logo {
@@ -105,11 +106,11 @@
   }
   
   .menu {
-   
+    justify-self: center;
   }
   
   .basket {
-
+    justify-self: center;
   } 
 
   .contacts {
@@ -120,10 +121,9 @@
 @media screen and (min-width: 671px) {
   .header {
     display: grid;
+    gap: 16px 11px;
     grid-template: 1fr 1fr/ 5fr 1fr 1fr;
-    gap: 0px 11px;
     align-items: center;
-    height: 110px;
     margin: 20px 0 20px 0;
   }
 

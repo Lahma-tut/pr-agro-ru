@@ -3,6 +3,8 @@ import s from "./filter.module.css";
 export default function Filter() {
   return (
     <div className={s.filter}>
+      <details className={s.details}>
+        <summary className={s.summary}>Показать Фильтры</summary>
       <section className={s.section}>
         <h4>Производитель</h4>
         <ul>
@@ -53,6 +55,7 @@ export default function Filter() {
            </li>
         </ul>
       </section>
+      </details>
     </div>
   );
 }

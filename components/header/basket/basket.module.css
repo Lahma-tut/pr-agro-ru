@@ -1,13 +1,10 @@
-.basket {
-  justify-self: center;
-}
 
 .link:hover {
   color: var(--orange-color);
 }
 
 .icon_basket {
-  font-size: 28px;
+  font-size: 23px;
   cursor: pointer;
   color: var(--green-color);
   transition: color 0.3s ease-out;

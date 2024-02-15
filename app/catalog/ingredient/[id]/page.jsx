@@ -28,7 +28,7 @@ const CategoryProductsList = async ({ products }) => {
       <Link 
         key={product.id}
         href={`/catalog/${product.slug}`}
-        className={styles.container}>
+        className={styles.list}>
         <div className={styles.image}>
           <Image src="/korsar-super-vrk-10l.jpeg" alt="" width={80} height={80}/>
           </div>
@@ -37,9 +37,9 @@ const CategoryProductsList = async ({ products }) => {
           <div className={styles.desc}>
             {product.description}  
           </div>
-        </div>
-        <div className={styles.price}>
-          {product.price}
+            <div className={styles.price}>
+            {product.price}
+            </div>
         </div>
       </Link>
       ))}
@@ -48,7 +48,6 @@ const CategoryProductsList = async ({ products }) => {
 };
  
 export default async function Page({ params }) {
-
   const ingredient = await prisma.ingredient.findUnique({
     where: {
       slug: params.id

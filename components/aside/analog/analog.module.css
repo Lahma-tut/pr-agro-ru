@@ -3,6 +3,7 @@
   letter-spacing: 0.5px;
   text-transform: uppercase;
   color: var(--orange-color);
+  padding: var(--padding);
 }
 
 .h6 {

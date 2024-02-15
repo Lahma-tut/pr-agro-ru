@@ -7,9 +7,11 @@ import Link from "next/link";
 
 export default function Basket() {
     return (
-        <div className={s.basket}>
-            <div className={s.icon_basket}><FontAwesomeIcon icon={faBasketShopping} /></div>
-            <Link href='#' className={s.link}></Link>
-        </div>
+        <button>
+            <div className={s.icon_basket}>
+                <FontAwesomeIcon icon={faBasketShopping} />
+            </div>
+        </button>
+
     )
 }

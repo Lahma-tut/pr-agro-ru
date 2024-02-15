@@ -37,3 +37,22 @@
   font-size: 13px;
   color: #bababa;
 }
+
+.summary {
+  font-size: 16px;
+  font-weight: 400;
+  text-transform: uppercase;
+  padding: 11px;
+  cursor: pointer;
+  color: var(--white-color);
+  background: var(--linear-gradient);
+  border-radius: 2px;
+}
+
+.details[open] {
+  
+}
+
+.details[open] summary {
+  margin-bottom: 20px;
+}

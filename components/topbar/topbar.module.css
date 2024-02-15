@@ -1,5 +1,5 @@
 .topbar {
-  height: 36px;
+  height: 40px;
   background-color: var(--grey-color);
 }
 
@@ -21,20 +21,14 @@
   letter-spacing: 0.5px;
 }
 
-.hello {
-  opacity: 0;
-  padding: 10px;
-  font-size: 0.86rem;
-  line-height: 126%;
-  text-wrap: pretty;
-  letter-spacing: 0.5px;
-}
 
 @media (max-width: 860px) {
+  .topbar {
+    height: 2px;
+    background-color: var(--orange-color);
+  }
+
   .row {
     display: none;
-  }
-  .hello {
-    opacity: 1;
   }
 }

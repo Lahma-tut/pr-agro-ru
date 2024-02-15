@@ -6,7 +6,7 @@
 
 .price ul {
   display: flex;
-  gap: 11px;
+  gap: 5px;
   align-items: center;
 }
 
@@ -62,11 +62,15 @@
   padding: 5px;
   font-weight: 400;
   letter-spacing: 0.2px;
-  line-height: normal;
+  line-height: 150%;
   text-transform: uppercase;
   border-radius: 2px;
   border: 1px solid var(--grey-color);
-  font-size: 9px;
+  font-size: 8px;
 }
 
-
+@media screen and (max-width: 600px) {
+  .info  {
+      display: block;
+  }
+}

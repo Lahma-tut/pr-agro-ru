@@ -30,7 +30,7 @@ export default function Price() {
             <h6>Ваша цена:</h6>
             <ul>
                 <li className={styles['discount-package']}>6 756<span className={styles['rub']}>₽</span></li>
-                <li className={styles['info']}>дополнительная скидка рассчитывается от объема</li>
+                <li className={styles['info']}>рассчитывается от объема</li>
             </ul>
         </section>
         <Counter />

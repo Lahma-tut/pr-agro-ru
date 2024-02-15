@@ -9,9 +9,8 @@ export default function TopBar() {
           <li>О компании</li>
           <li>Доставка</li>
           <li>Контакты</li>
-          <li>Яндкус отзывы</li>
+          <li>Яндекс отзывы</li>
       </ul>
-      <p className={styles.hello}>Hello, Dolly! </p>
   </div>
   );
 }

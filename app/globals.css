@@ -1,7 +1,7 @@
 :root {
   --max-width: 1200px;
   --margin: 0 auto;
-  --padding: 0 22px;
+  --padding: 0 13px;
   --font: 'Rubik', Helvetica, sans-serif;
   --font-text: 16px;
   --font-atribute: 15px;
@@ -38,5 +38,4 @@ main {
   height: 100%;
   max-width: var(--max-width);
   margin: var(--margin);
-  padding: var(--padding);
 }
