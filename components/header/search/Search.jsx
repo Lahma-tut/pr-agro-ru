@@ -35,7 +35,6 @@ export default function Search() {
 
 					{query && <button onClick={handleReset}>
 						<IoCloseSharp className={styles.IoCloseSharp} /></button>}
-						
 				</form>
 					
 					{query.length > 1 && <SearchResult query={query} />}
