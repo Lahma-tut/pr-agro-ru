@@ -16,9 +16,6 @@ export default function SearchResults({ query }) {
         {isLoading && 
           <p className={styles.results_list_item}>поиск...</p>}
 
-        {!isLoading && products.length === 0 && 
-          <p className={styles.results_list_item}>ничего не нашлось...</p>}
-
         {!isLoading && products.length > 0 && 
           products.map((item) => (
           <li key={item.id} className={styles.results_list_item}>
@@ -27,6 +24,9 @@ export default function SearchResults({ query }) {
             </Link>
           </li>))
         }
+
+        {!isLoading && products.length === 0 && 
+          <p className={styles.results_list_item}>ничего не нашлось...</p>}
 
         {error && 
           <p className={styles.results_list_item}>{error}</p>}
