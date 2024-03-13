@@ -1,10 +1,39 @@
+.details_nav {
+  cursor: pointer;
+  position: relative;
+}
+
+.summary_nav {
+  color: var(--green-color);
+  font-weight: 500;
+}
+
+.summary_list {
+  position: absolute;
+  top: 39px;
+  left: -15px;
+  border-radius: 4px;
+  background-color: white;
+  box-shadow: 0 0 8px #ddd;
+}
+
+.summary_list li {
+padding: 10px 20px;
+border-bottom: 1px solid #ddd;
+cursor: pointer;
+}
+
+.summary_list li:hover {
+background-color: var(--grey-color);
+}
+
+/* 
 
 .link:hover {
   color: var(--orange-color);
 }
 
 .icon_basket {
-  font-size: 23px;
   cursor: pointer;
   color: var(--green-color);
   transition: color 0.3s ease-out;
@@ -12,4 +41,4 @@
 
 .icon_basket:hover {
   color: var(--orange-color);
-}
+} */

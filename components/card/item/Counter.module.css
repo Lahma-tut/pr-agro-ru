@@ -29,7 +29,7 @@
     color: var(--white-color);
     background: var(--linear-gradient);
     transition: left 0.6s;
-    border-radius: 2px;
+    border-radius: 30px;
 }
 
 .button-cart:hover {

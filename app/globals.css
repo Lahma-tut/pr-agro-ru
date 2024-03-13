@@ -39,3 +39,12 @@ main {
   max-width: var(--max-width);
   margin: var(--margin);
 }
+
+.search_page {
+  padding: var(--padding);
+}
+
+.search_p {
+  margin-bottom: 30px;
+}
+

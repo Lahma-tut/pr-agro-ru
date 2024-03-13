@@ -1,16 +1,17 @@
 import styles from "./page.module.css";
 import { Suspense } from "react";
-import { prisma } from "@/lib/data";
+import { prisma } from "@/db/prisma";
 import Analog from "@/components/aside/analog/Analog";
 import Atributes from "@/components/card/item/Atributes";
 import Price from "@/components/card/item/Price";
 import Image from "next/image";
 import Breadcrumbs from "@/components/breadcrumbs/Breadcrumbs";
 
+
 // Получение Metadata
 export async function generateMetadata({ params, searchParams }) {
     const id = params.id;
-    const product  = await prisma.product.findUnique({
+    const product = await prisma.product.findUnique({
       where: {
         slug: id
       }
@@ -54,6 +55,7 @@ const Card = ({ product }) => {
 // Cтраница товара
 
 export default async function Page({ params }) {
+
   const product = await prisma.product.findUnique({
     where: { 
       slug: params.id 

@@ -1,5 +1,4 @@
-import s from "./analog.module.css";
-
+import s from './analog.module.css';
 
 export default function Analog() {
   return (

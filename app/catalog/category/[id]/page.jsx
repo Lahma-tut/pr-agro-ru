@@ -1,4 +1,4 @@
-import { prisma } from "@/lib/data";
+import { prisma } from "@/db/prisma";
 import styles from "@/app/catalog/page.module.css";
 import Filter from "@/components/aside/filter/Filter";
 import { Suspense } from "react";
@@ -10,7 +10,7 @@ import Breadcrumbs from "@/components/breadcrumbs/Breadcrumbs";
 export async function generateMetadata({ params, searchParams }) {
     const id = params.id;
 
-    const category  = await prisma.category.findUnique({
+    const category = await prisma.category.findUnique({
       where: {
         slug: id
       }
@@ -76,7 +76,7 @@ export default async function Page({ params, searchParams }) {
         <Filter />
       </aside>
     <div className={styles.body}>
-      <Suspense fallback={<Loading />}>
+      <Suspense key={category.id} fallback={<Loading />}>
         <CategoryProductsList products={ category.product }/>
       </Suspense>
     </div>

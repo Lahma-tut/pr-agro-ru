@@ -10,7 +10,7 @@
   align-items: center;
 }
 
-.basic, .basic-package, .discount, .discount-package{
+.basic, .basic_package, .discount, .discount_package{
   flex: 1 0 auto;
 }
 
@@ -21,12 +21,12 @@
   color: var(--atributes-color);
 }
 
-.basic, .basic-package {
+.basic, .basic_package {
   font-weight: 400;
   color: var(--green-color);
 }
 
-.discount, .discount-package {
+.discount, .discount_package {
   font-weight: 400;
   color: var(--orange-color);
 }
@@ -36,27 +36,12 @@
   font-size: var(--font-price);
 }
 
-/* 
-.basic::after {
-  font-size: var(--font-price);
-  content: ' \20BD';
+.info_text {
+  font-size: 13px;
+  font-style: italic;
+  letter-spacing: 0.2px;
+  line-height: 16px;
 }
-.basic-package::after {
-  font-size: var(--font-price);
-  content: ' \20BD';
-}
-.discount::after {
-  font-size: var(--font-price);
-  content: ' \20BD';
-}
-.discount-package::after {
-  font-size: var(--font-price);
-  content: ' \20BD';
-}
-.ruble::after::after {
-  font-size: var(--font-price);
-  content: ' \20BD';
-} */
 
 .info {
   padding: 5px;
