@@ -10,7 +10,7 @@
   align-items: center;
 }
 
-.basic, .basic_package, .discount, .discount_package{
+.basic, .basic_package, .discount, .discount_package {
   flex: 1 0 auto;
 }
 

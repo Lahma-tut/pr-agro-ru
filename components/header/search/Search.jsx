@@ -1,45 +1,40 @@
-'use client';
-import styles from "./search.module.css";
-import { useState } from "react";
-import { IoSearch } from "react-icons/io5";
-import { IoCloseSharp } from "react-icons/io5";
-import SearchResult from "./SearchResults";
+'use client'
+import { useState } from "react"
+import { IoSearch } from "react-icons/io5"
+import { IoCloseSharp } from "react-icons/io5"
+import styles from "./search.module.css"
+import SearchResult from "./SearchResults"
 
 
 export default function Search() {
-	const [query, setQuery] = useState('');
-	console.log('Search: ', query);
-	
-	const handleChange = async (e) => {
-		setQuery(e.target.value);
-	};
+	const [query, setQuery] = useState('')
 
 	const handleReset = () => {
-		setQuery('');
+		setQuery('')
 	};
 
 	return (
 		<>
 			<div className={styles.search_container}>
-				<form className={styles.form}>
-					<input
-						className={styles.input}
-						placeholder="поиск по товарам"
-						type="text"
-						name="q"
-						value={query}
-						onChange={handleChange}
-					/>
+				<input
+					onChange={e => setQuery(e.target.value)}
+					className={styles.input}
+					autocomplete="off"
+					placeholder="поиск по товарам"
+					type="text"
+					name="q"
+					value={query}
+				/>
 
-					<IoSearch className={styles.IoSearch} />
+				<IoSearch className={styles.IoSearch} />
 
-					{query && <button onClick={handleReset}>
-						<IoCloseSharp className={styles.IoCloseSharp} /></button>}
-				</form>
-					
-					{query.length > 1 && <SearchResult query={query} />}
-					
-			</div>
+
+				{query && <button onClick={handleReset}>
+					<IoCloseSharp className={styles.IoCloseSharp} /></button>}
+
+			{query.length > 1 && <SearchResult query={query} handleReset={handleReset}/>}
+
+		</div >
 		</>
 	)
-};
+}

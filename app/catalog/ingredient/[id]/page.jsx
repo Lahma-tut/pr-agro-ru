@@ -1,12 +1,11 @@
+import { prisma } from "@/db/prisma";
 import styles from "@/app/catalog/page.module.css";
 import Filter from "@/components/aside/filter/Filter";
-import { prisma } from "@/db/prisma";
 import { Suspense } from "react";
 import { Loading } from "@/components/loading/Loading";
 import Image from "next/image";
 import Link from "next/link";
 import Breadcrumbs from "@/components/breadcrumbs/Breadcrumbs";
-
 
 
 // Получение Metadata

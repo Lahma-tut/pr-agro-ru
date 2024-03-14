@@ -1,3 +1,12 @@
+'use client'
+
+import { FallingLines } from 'react-loader-spinner'
+
 export function Loading() {
-  return <h3>🌀 Loading...</h3>;
+  return <FallingLines
+    color="#4fa94d"
+    width="100"
+    visible={true}
+    ariaLabel="falling-circles-loading"
+  />
 }

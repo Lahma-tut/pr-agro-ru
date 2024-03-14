@@ -1,15 +1,16 @@
-import styles from "./page.module.css";
-import { Suspense } from "react";
-import { prisma } from "@/db/prisma";
-import Analog from "@/components/aside/analog/Analog";
-import Atributes from "@/components/card/item/Atributes";
-import Price from "@/components/card/item/Price";
-import Image from "next/image";
-import Breadcrumbs from "@/components/breadcrumbs/Breadcrumbs";
+import { prisma } from "@/db/prisma"
+import styles from "./page.module.css"
+import { Suspense } from "react"
+import Analog from "@/components/aside/analog/Analog"
+import Atributes from "@/components/card/Atributes"
+import Price from "@/components/card/Price"
+import Image from "next/image"
+import Breadcrumbs from "@/components/breadcrumbs/Breadcrumbs"
+import { Loading } from "@/components/loading/Loading"
 
 
 // Получение Metadata
-export async function generateMetadata({ params, searchParams }) {
+export async function generateMetadata({ params}) {
     const id = params.id;
     const product = await prisma.product.findUnique({
       where: {
@@ -20,10 +21,11 @@ export async function generateMetadata({ params, searchParams }) {
   return {
     title: product.title,
   }
-};
+}
 
 // Отображение данных о товаре
 const Card = ({ product }) => {
+
   return (
     <section className={styles.card}>
       <div className={styles.features}>
@@ -66,14 +68,16 @@ export default async function Page({ params }) {
       category:     true,
       ingredient:   true
     }
-  });
+  })
 
   return (
     <section className={styles.content}>
-      <Breadcrumbs h1={ product.title } h2={ product.category[0].title }/>
+
+        <Breadcrumbs h1={ product.title } h2={ product.category[0].title }/>
+
       <div className={styles.container}>
       <div className={styles.body}>
-        <Suspense fallback={"Loading..."}>
+        <Suspense fallback={<Loading />}>
           <Card product={ product }/>
         </Suspense>
         </div>

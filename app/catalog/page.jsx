@@ -50,8 +50,9 @@ async function CategoryList() {
       <ul>
         { category?.map((category) => (
             <li key={category.id}>
-              <Link className={styles.category_link} href={`/catalog/category/${category.slug}`}>
-                  { category.title }
+              <Link className={styles.category_link} 
+                    href={`/catalog/category/${category.slug}`}>
+                    { category.title }
               </Link>
           </li>
           ))}
