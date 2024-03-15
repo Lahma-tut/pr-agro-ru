@@ -1,4 +1,4 @@
-'use client'
+"use client"
 import { useState } from "react"
 import { IoSearch } from "react-icons/io5"
 import { IoCloseSharp } from "react-icons/io5"
@@ -16,14 +16,14 @@ export default function Search() {
 	return (
 		<>
 			<div className={styles.search_container}>
+				
 				<input
 					onChange={e => setQuery(e.target.value)}
 					className={styles.input}
-					autocomplete="off"
+					value={query}
 					placeholder="поиск по товарам"
 					type="text"
 					name="q"
-					value={query}
 				/>
 
 				<IoSearch className={styles.IoSearch} />

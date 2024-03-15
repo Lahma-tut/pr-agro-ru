@@ -11,8 +11,9 @@ export default function HeadingH2({ h2 }) {
       <h2 className={styles.h2}>
         <Link href="#" className={styles.link}>
           {h2 && <span className={styles.icon}>
-            <FontAwesomeIcon icon={faArrowLeft} /></span>}
-          {h2}
+            <FontAwesomeIcon icon={faArrowLeft} />
+            </span>}
+          { h2 }
         </Link>
       </h2>
     </>

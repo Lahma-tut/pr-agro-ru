@@ -42,3 +42,15 @@ background-color: var(--grey-color);
 .icon_basket:hover {
   color: var(--orange-color);
 } */
+
+@media screen and (max-width: 670px) {
+  .summary_nav {
+    color: var(--green-color);
+    font-size: 14px;
+    font-weight: 400;
+  }
+
+  .summary_nav::marker {
+    color: orange;
+  }
+}

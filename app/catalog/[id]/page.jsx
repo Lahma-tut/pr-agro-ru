@@ -6,7 +6,6 @@ import Atributes from "@/components/card/Atributes"
 import Price from "@/components/card/Price"
 import Image from "next/image"
 import Breadcrumbs from "@/components/breadcrumbs/Breadcrumbs"
-import { Loading } from "@/components/loading/Loading"
 
 
 // Получение Metadata
@@ -56,7 +55,7 @@ const Card = ({ product }) => {
 
 // Cтраница товара
 
-export default async function Page({ params }) {
+async function Page({ params }) {
 
   const product = await prisma.product.findUnique({
     where: { 
@@ -72,12 +71,10 @@ export default async function Page({ params }) {
 
   return (
     <section className={styles.content}>
-
         <Breadcrumbs h1={ product.title } h2={ product.category[0].title }/>
-
       <div className={styles.container}>
       <div className={styles.body}>
-        <Suspense fallback={<Loading />}>
+        <Suspense fallback={<div>Загрузка товара...</div>}>
           <Card product={ product }/>
         </Suspense>
         </div>
@@ -87,4 +84,6 @@ export default async function Page({ params }) {
       </div>
     </section>
   )
-};
+}
+
+export default Page;

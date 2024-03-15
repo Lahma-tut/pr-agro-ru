@@ -1,10 +1,10 @@
-import styles from './header.module.css';
-import Image from 'next/image';
-import logo from '/public/logo.png';
-import Link from 'next/link';
-import Menu from './menu/Menu';
-import Basket from './basket/Basket';
-import Search from './search/Search';
+import styles from './header.module.css'
+import Image from 'next/image'
+import logo from '/public/logo.png'
+import Link from 'next/link'
+import Menu from './menu/Menu'
+import Basket from './basket/Basket'
+import Search from './search/Search'
 
 function Header() {
 	return (
@@ -28,7 +28,7 @@ function Header() {
 			<h6 className={styles.tel}>8 (495) 198-07-97</h6>
 		</div>
 	</header>
-	);
+	)
 }
 
 export default Header;

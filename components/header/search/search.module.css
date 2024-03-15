@@ -11,19 +11,6 @@
   position: relative;
 }
 
-.form {
-  width: 100%;
-  width: 100%;
-  height: 40px;
-  border-radius: 30px;
-  border: 2px solid var(--orange-color);
-  display: flex;
-  align-items: center;
-  padding: 0 12px 0 11px;
-
-  position: relative;
-}
-
 .input {
   width: 100%;
   height: 100%;
@@ -42,11 +29,13 @@
 .IoSearch {
   width: 19px;
   position: absolute;
+  color: var(--atributes-color);
 }
 
 .IoCloseSharp {
   width: 22px;
   padding-top: 5px;
+  color: var(--atributes-color);
 }
 
 .results_list {
@@ -60,6 +49,7 @@
   position: absolute;
   top: 50px;
   left: 0;
+  z-index: 1;
 }
 
 .results_list_item {

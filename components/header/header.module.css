@@ -93,7 +93,7 @@
 @media screen and (max-width: 670px) {
   .header {
     display: grid;
-    grid-template: 1fr 1fr/ 1fr 66px 90px;
+    grid-template: 1fr 1fr/ 1fr 59px 84px;
     gap: 30px 11px;
     align-items: center;
     width: 100%;
@@ -115,14 +115,12 @@
     grid-column: 2 / 3;
     grid-row: 1 / 2;
     justify-self: center;
-    font-size: 14px;
   }
   
   .basket {
     grid-column: 3 / 4;
     grid-row: 1 / 2;
     justify-self: center;
-    font-size: 14px;
   } 
 
   .contacts {

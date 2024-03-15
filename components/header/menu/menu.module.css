@@ -40,3 +40,12 @@
 .icon_menu:focus {
   color: var(--orange-color);
 } */
+
+
+@media screen and (max-width: 670px) {
+  .summary_nav {
+    color: var(--green-color);
+    font-size: 14px;
+    font-weight: 400;
+  }
+}
