@@ -5,14 +5,14 @@ export default async function Home() {
 
   return (
     <section>
-    <div className={styles.home}>
-      <div className={styles.home_item}>
-        <p>
-          Главная страница в разработке, но каталог работает 🙂
-        </p>
-        <Link className={styles.link} href="/catalog">Каталог</Link>
+      <div className={styles.home}>
+        <div className={styles.home_item}>
+          <p>
+            Главная страница в разработке, но каталог работает 🙂
+          </p>
+          <Link className={styles.link} href="/catalog">Каталог</Link>
+        </div>
       </div>
-    </div>
     </section>
   );
 };

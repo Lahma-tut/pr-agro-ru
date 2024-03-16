@@ -1,15 +1,16 @@
 "use client"
 import styles from "./loading.module.css"
-import { FallingLines } from 'react-loader-spinner'
+import { Oval } from 'react-loader-spinner'
 
 export function Loading() {
   return (
     <section className={styles.loading}>
-      <FallingLines
-        color="#4fa94d"
-        width="100"
+      <Oval
         visible={true}
-        ariaLabel="falling-circles-loading"
+        height="80"
+        width="80"
+        color="#4fa94d"
+        ariaLabel="oval-loading"
         />
     </section>
   )

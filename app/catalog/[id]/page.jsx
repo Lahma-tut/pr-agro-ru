@@ -6,6 +6,8 @@ import Atributes from "@/components/card/Atributes"
 import Price from "@/components/card/Price"
 import Image from "next/image"
 import Breadcrumbs from "@/components/breadcrumbs/Breadcrumbs"
+import { Loading } from "@/components/loading/Loading"
+import Link from "next/link"
 
 
 // Получение Metadata
@@ -55,7 +57,7 @@ const Card = ({ product }) => {
 
 // Cтраница товара
 
-async function Page({ params }) {
+export default async function Page({ params }) {
 
   const product = await prisma.product.findUnique({
     where: { 
@@ -69,12 +71,23 @@ async function Page({ params }) {
     }
   })
 
+  const category = product.category[0];
+
   return (
-    <section className={styles.content}>
-        <Breadcrumbs h1={ product.title } h2={ product.category[0].title }/>
+    <>
+      <Breadcrumbs>
+        <h2 className={styles.h2}>
+          <Link href={`/catalog/category/${category.slug}`}>
+          { category.title }
+          </Link>
+          </h2>
+        <h1 className={styles.h1}>
+          { product.title }
+          </h1>
+      </Breadcrumbs>
       <div className={styles.container}>
       <div className={styles.body}>
-        <Suspense fallback={<div>Загрузка товара...</div>}>
+        <Suspense fallback={<Loading />}>
           <Card product={ product }/>
         </Suspense>
         </div>
@@ -82,8 +95,6 @@ async function Page({ params }) {
         <Analog />
         </aside>
       </div>
-    </section>
+    </>
   )
-}
-
-export default Page;
+};
