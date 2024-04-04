@@ -1,18 +1,32 @@
-import Link from "next/link";
-import styles from "./page.module.css";
+import styles from './page.module.css'
+import Slider from '@/components/slider/Slider'
+import Catalog from '@/components/catalog/Catalog'
+import About from '@/components/about/About'
+import  Partners from '@/components/partners/Partners'
+import Link from 'next/link'
 
-export default async function Home() {
 
+function Home() {
   return (
-    <section>
+    <>
       <div className={styles.home}>
-        <div className={styles.home_item}>
-          <p>
-            Главная страница в разработке, но каталог работает 🙂
-          </p>
-          <Link className={styles.link} href="/catalog">Каталог</Link>
-        </div>
+          <Slider />
+          
+          <div className={styles.title}>
+            <Link 
+              className={styles.link}
+              href='/catalog'
+              >
+              <h2>Каталог</h2>
+            </Link>
+            <span className={styles.arrow}> &#5125;</span>
+          </div>
+          <Catalog />
+          <About />
+          <Partners />
       </div>
-    </section>
-  );
-};
+    </>
+  )
+}
+
+export default Home;

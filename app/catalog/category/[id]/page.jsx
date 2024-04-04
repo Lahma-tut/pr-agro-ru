@@ -1,15 +1,18 @@
-import { prisma } from "@/db/prisma";
-import styles from "@/app/catalog/page.module.css";
-import Filter from "@/components/aside/filter/Filter";
-import { Suspense } from "react";
-import Image from "next/image";
-import Link from "next/link";
-import Breadcrumbs from "@/components/breadcrumbs/Breadcrumbs";
+import { prisma } from "@/db/prisma"
+import styles from "@/app/catalog/page.module.css"
+import Filter from "@/components/aside/filter/Filter"
+import { Suspense } from "react"
+import Products from "@/components/products/Products"
+import Skeleton from "@/components/breadcrumbs/Skeleton"
+import Breadcrumbs from "@/components/breadcrumbs/Breadcrumbs"
+import { LoadingServer } from "./../../loading"
+import H2 from "@/components/headling/H2"
+import H1 from "@/components/headling/H1"
 
 // Получение Metadata
+
 export async function generateMetadata({ params, searchParams }) {
 	const id = params.id;
-
 	const category = await prisma.category.findUnique({
 		where: {
 			slug: id
@@ -21,47 +24,8 @@ export async function generateMetadata({ params, searchParams }) {
 	}
 };
 
-
-// Вывод категории с товаром
-const ProductsList = async ({ products }) => {
-	return (
-		<>
-			{products.map((product) => (
-				<Link
-					key={product.id}
-					href={`/catalog/${product.slug}`}
-					className={styles.list}>
-					<div className={styles.image}>
-						<Image 
-							src="/korsar-super-vrk-10l.jpeg" 
-							alt="Изображение товара" 
-							width={80} 
-							height={80} 
-							/>
-					</div>
-
-					<div className={styles.content}>
-						<h3 className={styles.h3}>
-							{ product.title }
-							</h3>
-						<div className={styles.content_row}>
-							<div className={styles.desc}>
-								{ product.description }
-							</div>
-							<div className={styles.price}>
-								{ product.price }
-								<span className={styles['rub']}>₽</span>
-							</div>
-						</div>
-					</div>
-				</Link>
-			))}
-		</>
-	)
-}
-
-
 // Страница категорий
+
 export default async function Page({ params }) {
 	const category = await prisma.category.findUnique({
 		where: {
@@ -75,19 +39,17 @@ export default async function Page({ params }) {
 
 	return (
 		<>
-			<Breadcrumbs>
-				<h2 className={styles.h2}>
-					<Link href="/catalog">Каталог</Link>
-				</h2>
-				<h1 className={styles.h1}>{ category.title }</h1>
-			</Breadcrumbs>
+				<Breadcrumbs>
+					<H2 category="Каталог" slug=""/>
+          <H1 title={category.title} slug={category.slug} />
+				</Breadcrumbs>
 			<div className={styles.container}>
 				<aside className={styles.aside}>
 					<Filter />
 				</aside>
 				<div className={styles.body}>
-					<Suspense fallback={<p>Suspense...</p>}>
-						<ProductsList products={category.product} />
+					<Suspense fallback={<LoadingServer />}>
+						<Products products={category.product} />
 					</Suspense>
 				</div>
 			</div>

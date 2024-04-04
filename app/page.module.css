@@ -1,13 +1,45 @@
 .home {
-  font-size: var(--font-text);
   font-weight: 300;
+  font-size: var(--font-text);
   padding: var(--padding);
 }
 
-.home_item {
-  padding: 30px 0;
+.link {
+  transition: all 0.3s ease-out;
 }
 
+.arrow {
+  display: block;
+  font-size: 33px;
+  font-weight: 600;
+  line-height: 136%;
+  color: var(--orange-color);
+  transition: all 0.3s ease-out;
+  cursor: pointer;
+}
+
+.title:hover > .arrow {
+  transform: translateX(6px);
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 11px;
+  margin: var(--margin-block);
+}
+
+.home h2 {
+  font-size: 33px;
+  font-weight: 600;
+  line-height: 136%;
+  color: var(--orange-color);
+  text-transform: uppercase;
+}
+
+
+/* 
 .link {
   font-size: var(--font-text);
   font-weight: 300;
@@ -21,4 +53,4 @@
 
 .link:hover {
   color: var(--orange-color);
-}
+} */

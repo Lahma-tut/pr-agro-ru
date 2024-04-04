@@ -22,20 +22,24 @@
   font-size: 15px;
 }
 
-.input:focus + .IoSearch {
-  color: var(--orange-color);
-}
-
 .IoSearch {
   width: 19px;
   position: absolute;
-  color: var(--atributes-color);
+  color: var(--orange-color);
+}
+
+.input:focus + .search_container {
+  box-shadow: 0 0 8px #ddd;
 }
 
 .IoCloseSharp {
   width: 22px;
   padding-top: 5px;
-  color: var(--atributes-color);
+  color: var(--green-color);
+}
+
+.input:focus + .IoCloseSharp {
+  color: var(--orange-color);
 }
 
 .results_list {

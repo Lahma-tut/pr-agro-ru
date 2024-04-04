@@ -1,12 +1,11 @@
 "use client"
 import Link from "next/link"
 import styles from "./search.module.css"
-import { useSearch } from "@/services/fetcher"
+import { useSearchSWR } from "@/services/fetcher"
 
 
 export default function SearchResults({ query, handleReset }) {
-  
-  const { products, isLoading, error } = useSearch(query)
+  const { products, isLoading, error } = useSearchSWR(query)
 
   return (
     <>

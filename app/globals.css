@@ -2,6 +2,7 @@
   --max-width: 1200px;
   --margin: 0 auto;
   --padding: 0 13px;
+  --margin-block: 0 0 40px 0;
   --font: 'Rubik', Helvetica, sans-serif;
   --font-text: 16px;
   --font-atribute: 15px;
@@ -20,8 +21,8 @@
 
 html,
 body {
-  font-family: var(--font);
   height: 100%;
+  font-family: var(--font);
   color: var(--text-color);
 }
 
@@ -38,6 +39,12 @@ main {
   height: 100%;
   max-width: var(--max-width);
   margin: var(--margin);
+}
+
+p {
+  line-height: 136%;
+  text-wrap: pretty;
+  padding: 0 0 11px 0;
 }
 
 .search_page {

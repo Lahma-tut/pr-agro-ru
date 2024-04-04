@@ -1,4 +1,6 @@
 /* Reset and base styles  */
+
+
 * {
 	padding: 0px;
 	margin: 0px;
@@ -37,7 +39,7 @@ img {
 img, svg {
 	max-width: 100%;
 	height: auto;
-}
+} 
 
 address {
   font-style: normal;
@@ -80,3 +82,5 @@ label {
 legend {
 	display: block;
 }
+
+

@@ -1,8 +1,8 @@
-import useSWR from "swr";
+import useSWR from "swr"
 
-const fetcher = (...args) => fetch(...args).then(res => res.json());
+const fetcher = (...args) => fetch(...args).then(res => res.json())
 
-export function useSearch (query) {
+export function useSearchSWR(query) {
   const { data, isLoading, error} = useSWR(
     `/api/product?q=${query}`, 
     fetcher
