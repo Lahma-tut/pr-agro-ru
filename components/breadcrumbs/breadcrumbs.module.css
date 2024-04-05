@@ -2,7 +2,7 @@
   .breadcrumb {
     display: flex;
     align-items: center;
-    min-height: 122px;
+    min-height: 136px;
     margin: 0 0 40px 0;
     background: url('/banner-background.png') 155px 0px/auto auto no-repeat;
   }

@@ -2,7 +2,7 @@
   .header {
     display: grid;
     gap: 30px 11px;
-    grid-template: 1fr 1fr/ 6fr 80px 105px 160px;
+    grid-template: 1fr 1fr/ 4fr 1fr 1fr 2fr;
     align-items: center;
     width: 100%;
     margin: 25px 0 25px 0;
@@ -53,7 +53,7 @@
 @media screen and (min-width: 891px) {
   .header {
     display: grid;
-    grid-template-columns: 220px auto 80px 105px 160px;
+    grid-template-columns: 226px auto 70px 70px 166px;
     width: 100%;
     height: 130px;
     align-items: center;
