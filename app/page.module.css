@@ -18,11 +18,12 @@
   cursor: pointer;
 }
 
-.title:hover > .arrow {
+.h2:hover > .arrow {
   transform: translateX(6px);
 }
 
-.title {
+
+.body {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -30,27 +31,11 @@
   margin: var(--margin-block);
 }
 
-.home h2 {
+.h2 {
   font-size: 33px;
+  display: contents;
   font-weight: 600;
   line-height: 136%;
   color: var(--orange-color);
   text-transform: uppercase;
 }
-
-
-/* 
-.link {
-  font-size: var(--font-text);
-  font-weight: 300;
-  line-height: 186%;
-  text-wrap: pretty;
-  text-underline-offset: 4px;
-  text-decoration: revert;
-  text-decoration-color: #c9c9c9;
-  transition: color 0.3s ease-out;
-}
-
-.link:hover {
-  color: var(--orange-color);
-} */

@@ -11,15 +11,13 @@ function Home() {
     <>
       <div className={styles.home}>
           <Slider />
-          
-          <div className={styles.title}>
-            <Link 
-              className={styles.link}
-              href='/catalog'
-              >
-              <h2>Каталог</h2>
-            </Link>
-            <span className={styles.arrow}> &#5125;</span>
+          <div className={styles.body}>
+            <h2 className={styles.h2}>
+              <Link href='/catalog'>
+                Каталог
+              </Link>
+              <span className={styles.arrow}> &#5125;</span>
+            </h2>
           </div>
           <Catalog />
           <About />

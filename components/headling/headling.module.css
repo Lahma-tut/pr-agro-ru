@@ -12,16 +12,13 @@
   transition: all 0.2s ease-in-out;
 }
 
-.body h2 {
+.h2 {
+  display: contents;
   font-weight: 500;
   line-height: 136%;
   letter-spacing: 0.5px;
   text-transform: uppercase;
   color: var(--orange-color);
-}
-
-.body:hover > .arrow {
-  transform: translateX(-3px);
 }
 
 .arrow {
@@ -34,32 +31,6 @@
   transition: all 0.2s ease-in-out;
 }
 
-
-
-/* .block {
-  background: green;
-  border-radius: 10px;
-  padding: 20px;    
-  position: relative;
-  color: #fff;
+.h2:hover > .arrow {
+  transform: translateX(-3px);
 }
-
-.block::after {
-  border: 20px solid transparent; 
-  border-right: 20px solid green;
-}
-
-.icon {
-  color: var(--orange-color);
-  transition: color 0.1s ease-out;
-} */
-
-
-/* .link:hover {
-  
-}
-
-.link:hover .icon, .link:hover h2 {
-
-} */
-

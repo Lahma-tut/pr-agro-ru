@@ -1,11 +1,7 @@
 import Breadcrumbs from '@/components/breadcrumbs/Breadcrumbs'
 import styles from './page.module.css'
 import Filter from '@/components/aside/filter/Filter'
-import Link from 'next/link'
-import Image from 'next/image'
 import { Suspense } from 'react'
-
-import { Loading } from '@/components/loading/Loading'
 import H1 from '@/components/headling/H1'
 import Catalog from '@/components/catalog/Catalog'
 import LoadingServer from './loading'
