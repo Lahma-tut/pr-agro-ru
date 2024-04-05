@@ -1,57 +1,12 @@
-/* PAGE */
-.container {
-  display: flex;
-  gap: 22px;
-  margin: 0 0 40px 0;
-  padding: var(--padding);
-}
+@media screen and (max-width: 670px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    margin: 0 0 40px 0;
+    padding: var(--padding);
+  }
 
-.body {
-  flex: 4;
-}
-
-.aside {
-  flex: 1;
-}
-
-/* breadcrumb */
-
-.h1 {
-  font-size: 33px;
-  font-weight: 600;
-  text-transform: uppercase;
-  color: var(--green-color);
-}
-
-.h2 {
-  font-weight: 500;
-  text-transform: uppercase;
-  color: var(--orange-color);
-  transition: letter-spacing 0.1s ease-out;
-}
-
-.link {
-  display: flex;
-  padding: 0 0 0 5px;
-  align-items: center;
-  gap: 8px;
-}
-
-.icon {
-  color: var(--orange-color);
-  transition: color 0.1s ease-out;
-}
-
-.h2:hover {
-  letter-spacing: 1px;
-}
-
-.link:hover .icon, .link:hover h2 {
-
-}
-
-
-@media screen and (max-width: 670px){
   .breadcrumb {
     display: flex;
     align-items: center;
@@ -70,6 +25,21 @@
 }
 
 @media screen and (min-width: 671px) {
+  .container {
+    display: flex;
+    gap: 22px;
+    margin: 0 0 40px 0;
+    padding: var(--padding);
+  }
+  
+  .body {
+    flex: 4;
+  }
+  
+  .aside {
+    flex: 1;
+  }
+
   .breadcrumb {
     display: flex;
     align-items: center;

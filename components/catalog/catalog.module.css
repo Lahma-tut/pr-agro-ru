@@ -47,11 +47,10 @@
 
 .category_img {
   position: relative;
-
 }
 
 .category_img img {
-  border-radius: 2px;
+  border-radius: 6px;
 }
 
 .category_info {

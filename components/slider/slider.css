@@ -4,14 +4,15 @@
   position: relative;
   margin: var(--margin-block);
   overflow: hidden;
+  border-radius: 6px;
 }
 
 .slider-image img {
   width: 100%;
   height: 100%;
-  border-radius: 2px;
   object-fit: cover;
   filter: brightness(93%);
+
 
   animation-name: scale;
   animation-duration: 10s;
@@ -76,9 +77,9 @@
   }
 }
 
+ 
 .slider-title {
   margin: 0 0 20px 0;
-
 }
 
 .slider-title h1 {
@@ -88,6 +89,31 @@
   line-height: 136%;
   text-transform: uppercase;
 }
+
+@media screen and (max-width: 670px) {
+  
+  .slider-title h1 {
+    font-size: 33px;
+    color: white;
+    font-weight: 600;
+    line-height: 130%;
+    text-transform: uppercase;
+  }
+
+  .slider-btn {
+    font-size: 30px;
+    color: var(--orange-color);
+    display: flex;
+    align-items: center;
+    padding: 5px;
+  }
+
+  .slider-btn:hover {
+    scale: 1;
+  }
+
+}
+
 
 .slider-button {
   padding: 11px 33px;

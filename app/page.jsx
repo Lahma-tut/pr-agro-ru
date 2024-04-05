@@ -12,7 +12,7 @@ function Home() {
       <div className={styles.home}>
           <Slider />
           <div className={styles.body}>
-            <h2 className={styles.h2}>
+            <h2 className={styles.home_h2}>
               <Link href='/catalog'>
                 Каталог
               </Link>

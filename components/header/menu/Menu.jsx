@@ -1,20 +1,19 @@
 'use client'
-
+import { LuMenuSquare } from 'react-icons/lu'
+import { HiOutlineMenuAlt2 } from 'react-icons/hi'
 import styles from './menu.module.css'
 import Link from 'next/link'
 
 export default function Menu() {
 	return (
-		<div className={styles.nav_conteiner}>
-			<details className={styles.details_nav}>
-				<summary className={styles.summary_nav}>МЕНЮ</summary>
-				<ul className={styles.summary_list}>
-					<li><Link href='/'>О нас</Link></li>
-					<li><Link href='/catalog'>Каталог</Link></li>
-					<li><Link href='#'>Доставка</Link></li>
-					<li><Link href='#'>Контакты</Link></li>
+		<>
+				<ul className={styles.list}>
+					<li>
+						<Link href='/catalog'>
+							<HiOutlineMenuAlt2 className={styles.icon}/>
+						</Link>
+						</li>
 				</ul>
-			</details>
-		</div>
+		</>
 	)
-};
+}

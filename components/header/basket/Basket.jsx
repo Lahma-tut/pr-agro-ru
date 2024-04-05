@@ -1,20 +1,19 @@
 'use client'
-import styles from "./basket.module.css";
-import { faBasketShopping } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import Link from "next/link";
+import styles from './basket.module.css'
+import Link from 'next/link'
+import { RiShoppingCartLine } from 'react-icons/ri'
 
 
 export default function Basket() {
 	return (
-		<details className={styles.details_nav}>
-			<summary className={styles.summary_nav}>КОРЗИНА</summary>
-			<ul className={styles.summary_list}>
-				<li><Link href='/'>О нас</Link></li>
-				<li><Link href='/catalog'>Каталог</Link></li>
-				<li><Link href='#'>Доставка</Link></li>
-				<li><Link href='#'>Контакты</Link></li>
+		<>
+			<ul className={styles.list}>
+				<li>
+					<Link href='/'>
+						<RiShoppingCartLine className={styles.icon} />
+					</Link>
+					</li>
 			</ul>
-		</details>
+		</>
 	)
 }
