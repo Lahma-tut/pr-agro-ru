@@ -1,13 +1,13 @@
-import { prisma } from "@/db/prisma"
-import styles from "@/app/catalog/page.module.css"
-import Filter from "@/components/aside/filter/Filter"
-import { Suspense } from "react"
-import Products from "@/components/products/Products"
-import Skeleton from "@/components/breadcrumbs/Skeleton"
-import Breadcrumbs from "@/components/breadcrumbs/Breadcrumbs"
-import { LoadingServer } from "./../../loading"
-import H2 from "@/components/headling/H2"
-import H1 from "@/components/headling/H1"
+import { prisma } from '@/db/prisma'
+import styles from '@/app/catalog/page.module.css'
+import Filter from '@/components/aside/filter/Filter'
+import { Suspense } from 'react'
+import Products from '@/components/products/Products'
+import Skeleton from '@/components/breadcrumbs/Skeleton'
+import Breadcrumbs from '@/components/breadcrumbs/Breadcrumbs'
+import { LoadingServer } from './../../loading'
+import H2 from '@/components/headling/H2'
+import H1 from '@/components/headling/H1'
 
 // Получение Metadata
 
@@ -39,10 +39,10 @@ export default async function Page({ params }) {
 
 	return (
 		<>
-				<Breadcrumbs>
-					<H2 category="Каталог" slug=""/>
-          <H1 title={category.title} slug={category.slug} />
-				</Breadcrumbs>
+			<Breadcrumbs>
+				<H2 category='Каталог' slug='' />
+				<H1 title={category.title} slug={category.slug} />
+			</Breadcrumbs>
 			<div className={styles.container}>
 				<aside className={styles.aside}>
 					<Filter />
@@ -55,4 +55,4 @@ export default async function Page({ params }) {
 			</div>
 		</>
 	)
-};
+}

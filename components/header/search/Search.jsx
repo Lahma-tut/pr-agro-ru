@@ -1,9 +1,9 @@
-"use client"
-import { useState } from "react"
-import { IoSearch } from "react-icons/io5"
-import { IoCloseSharp } from "react-icons/io5"
-import styles from "./search.module.css"
-import SearchResult from "./SearchResults"
+'use client'
+import { useState } from 'react'
+import { IoSearch } from 'react-icons/io5'
+import { IoCloseSharp } from 'react-icons/io5'
+import styles from './search.module.css'
+import SearchResult from './SearchResults'
 
 
 export default function Search() {
@@ -16,14 +16,13 @@ export default function Search() {
 	return (
 		<>
 			<div className={styles.search_container}>
-				
 				<input
 					onChange={e => setQuery(e.target.value)}
 					className={styles.input}
 					value={query}
-					placeholder="поиск по товарам"
-					type="text"
-					name="q"
+					placeholder='поиск по товарам'
+					type='text'
+					name='q'
 				/>
 
 				<IoSearch className={styles.IoSearch} />
@@ -31,9 +30,8 @@ export default function Search() {
 				{query && <button onClick={handleReset}>
 					<IoCloseSharp className={styles.IoCloseSharp} /></button>}
 
-			{query.length > 1 && <SearchResult query={query} handleReset={handleReset}/>}
-
-		</div >
+				{query.length > 1 && <SearchResult query={query} handleReset={handleReset} />}
+			</div >
 		</>
 	)
 }

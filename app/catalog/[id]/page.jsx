@@ -1,13 +1,13 @@
-import { prisma } from "@/db/prisma"
-import { Suspense } from "react"
-import styles from "./page.module.css"
-import Analog from "@/components/aside/analog/Analog"
-import Breadcrumbs from "@/components/breadcrumbs/Breadcrumbs"
-import { Skeleton } from "@/components/breadcrumbs/Skeleton"
-import Card from "@/components/card/Card"
-import H1 from "@/components/headling/H1"
-import H2 from "@/components/headling/H2"
-import { LoadingServer } from "./../loading"
+import { prisma } from '@/db/prisma'
+import { Suspense } from 'react'
+import styles from './page.module.css'
+import Analog from '@/components/aside/analog/Analog'
+import Breadcrumbs from '@/components/breadcrumbs/Breadcrumbs'
+import { Skeleton } from '@/components/breadcrumbs/Skeleton'
+import Card from '@/components/card/Card'
+import H1 from '@/components/headling/H1'
+import H2 from '@/components/headling/H2'
+import { LoadingServer } from './../loading'
 
 
 // Получение Metadata
