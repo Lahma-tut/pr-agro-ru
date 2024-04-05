@@ -37,7 +37,6 @@ export default function Slider() {
   return (
     <>
     <div className='slider-container'>
-     
      <div className='slider-body'>
         <div className='slider-title'>
             <h1>{ slider.name }</h1>
