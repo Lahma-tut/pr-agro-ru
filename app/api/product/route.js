@@ -11,8 +11,7 @@ export async function GET(request) {
   let currentProduct = data;
 
   if (query) {
-    currentProduct = data.filter(item => 
-      item.title.toLowerCase().includes(query.toLowerCase()));
+    currentProduct = data.filter(item => item.title.toLowerCase().includes(query.toLowerCase()));
   }
   
   return NextResponse.json(currentProduct);

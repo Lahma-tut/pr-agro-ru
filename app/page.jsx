@@ -20,8 +20,8 @@ function Home() {
             </h2>
           </div>
           <Catalog />
-          <About />
-          <Partners />
+          {/* <About />
+          <Partners /> */}
       </div>
     </>
   )
