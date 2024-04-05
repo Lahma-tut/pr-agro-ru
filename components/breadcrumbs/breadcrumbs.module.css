@@ -2,9 +2,9 @@
   .breadcrumb {
     display: flex;
     align-items: center;
-    min-height: 136px;
+    min-height: 116px;
     margin: 0 0 40px 0;
-    background: url('/banner-background.png') 155px 0px/auto auto no-repeat;
+    background: url('/banner-background.png') 126px -6px /auto auto no-repeat;
   }
   
   .box {

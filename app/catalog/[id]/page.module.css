@@ -1,4 +1,22 @@
-/* PAGE */
+
+@media screen and (max-width: 670px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    margin: 0 0 44px 0;
+  }
+  
+  .body {
+    flex: 4;
+  }
+  
+  .aside {
+    flex: 1;
+  }
+}
+
+@media screen and (min-width: 671px) {
 .container {
   display: flex;
   gap: 22px;
@@ -11,4 +29,6 @@
 
 .aside {
   flex: 1;
+}
+
 }

@@ -13,7 +13,6 @@
   object-fit: cover;
   filter: brightness(93%);
 
-
   animation-name: scale;
   animation-duration: 10s;
   animation-iteration-count: infinite;
@@ -30,6 +29,43 @@
   }
 }
 
+/* body & title */
+.slider-body {
+  max-width: 500px;
+  position: absolute;
+  padding: 11px;
+  top: 30%;
+  left: 8%;
+  z-index: 1;
+  
+  animation-name: opacity;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+}
+
+@keyframes opacity {
+  from {
+    opacity: 0.2
+  } 
+
+  to {
+    opacity: 1
+  }
+}
+
+.slider-title {
+  margin: 0 0 20px 0;
+}
+
+.slider-title h1 {
+  font-size: 36px;
+  color: white;
+  font-weight: 600;
+  line-height: 136%;
+  text-transform: uppercase;
+}
+
+/* стрелки */
 .slider-btn {
   font-size: 36px;
   color: var(--orange-color);
@@ -54,67 +90,6 @@
   right: 0;
 }
 
-.slider-body {
-  max-width: 500px;
-  position: absolute;
-  padding: 11px;
-  top: 30%;
-  left: 8%;
-  z-index: 1;
-  
-  animation-name: opacity;
-  animation-duration: 2s;
-  animation-iteration-count: 1;
-}
-
-@keyframes opacity {
-  from {
-    opacity: 0.2
-  } 
-
-  to {
-    opacity: 1
-  }
-}
-
- 
-.slider-title {
-  margin: 0 0 20px 0;
-}
-
-.slider-title h1 {
-  font-size: 36px;
-  color: white;
-  font-weight: 600;
-  line-height: 136%;
-  text-transform: uppercase;
-}
-
-@media screen and (max-width: 670px) {
-  
-  .slider-title h1 {
-    font-size: 33px;
-    color: white;
-    font-weight: 600;
-    line-height: 130%;
-    text-transform: uppercase;
-  }
-
-  .slider-btn {
-    font-size: 30px;
-    color: var(--orange-color);
-    display: flex;
-    align-items: center;
-    padding: 5px;
-  }
-
-  .slider-btn:hover {
-    scale: 1;
-  }
-
-}
-
-
 .slider-button {
   padding: 11px 33px;
   cursor: pointer;
@@ -134,4 +109,72 @@
   translate: -50%;
   color: white;
 }
+
+
+/* мобильная */
+@media screen and (max-width: 670px) { 
+/* body & title */
+.slider-body {
+  max-width: 290px;
+  position: absolute;
+  padding: 11px;
+  top: 27%;
+  left: 11%;
+  z-index: 1;
+  
+  animation-name: opacity;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+}
+
+@keyframes opacity {
+  from {
+    opacity: 0.2
+  } 
+
+  to {
+    opacity: 1
+  }
+}
+
+.slider-title {
+  margin: 0 0 20px 0;
+}
+
+.slider-title h1 {
+  font-size: 27px;
+  color: white;
+  font-weight: 600;
+  line-height: 130%;
+  text-transform: uppercase;
+}
+
+/* стрелки */
+.slider-btn {
+  font-size: 27px;
+  color: var(--orange-color);
+  position: absolute;
+  display: block;
+  top: 0;
+  bottom: 0;
+  z-index: 2;
+  padding: 11px;
+  transition: scale 0.3s ease-out;
+}
+
+.slider-btn:hover {
+  scale: 1.2;
+}
+
+.left {
+  left: 0;
+}
+
+.right {
+  right: 0;
+}
+
+}
+
+
 
