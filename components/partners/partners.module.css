@@ -9,11 +9,11 @@
   margin: 0 0 20px 0;
 }
 
-.home h2 {
-  font-size: 33px;
+.partners h2 {
+  font-size: 30px;
   font-weight: 600;
   line-height: 136%;
-  color: var(--orange-color);
+  color: var(--green-color);
   text-transform: uppercase;
 }
 

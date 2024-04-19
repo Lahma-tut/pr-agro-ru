@@ -1,6 +1,7 @@
 .topbar {
   height: 40px;
-  background-color: var(--grey-color);
+  color: white;
+  background: var(--linear-gradient);
 }
 
 .row {
