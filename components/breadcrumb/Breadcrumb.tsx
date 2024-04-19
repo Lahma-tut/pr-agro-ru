@@ -1,6 +1,6 @@
-import styles from "./breadcrumbs.module.css"
+import styles from './breadcrumb.module.css'
 
-export default function Breadcrumbs({ children }) {
+export default function Breadcrumb({ children }:{children: React.ReactNode}) {
   return (
     <div className={styles.breadcrumb}>
       <div className={styles.box}>
@@ -8,4 +8,4 @@ export default function Breadcrumbs({ children }) {
       </div>
     </div>
   )
-};
+}

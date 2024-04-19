@@ -1,5 +1,6 @@
-"use client"
-import styles from "./loading.module.css"
+'use client'
+
+import styles from './loading.module.css'
 import { MutatingDots } from 'react-loader-spinner'
 
 export function Loading() {

@@ -5,7 +5,6 @@ import About from '@/components/about/About'
 import Partners from '@/components/partners/Partners'
 import Link from 'next/link'
 
-
 export default function Home() {
   return (
     <>
@@ -20,8 +19,8 @@ export default function Home() {
           </h2>
         </div>
         <Catalog />
-        {/* <About />
-          <Partners /> */}
+        <About />
+        <Partners />
       </div>
     </>
   )

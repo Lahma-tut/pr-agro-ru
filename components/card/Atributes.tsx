@@ -1,8 +1,14 @@
 import Link from 'next/link'
 import styles from './atributes.module.css'
+import { Ingredient, Manufacturer, Packing } from '@prisma/client'
 
+type AtributesProps = {
+		ingredient: Ingredient[] | undefined
+		manufacturer: Manufacturer[] | undefined
+    packing: Packing[] | undefined
+}
 
-export default async function Atributes({ ingredient, manufacturer, packing }) {
+export default function Atributes({ingredient, manufacturer, packing}: AtributesProps) {
 
 	return (
 		<>
@@ -10,10 +16,10 @@ export default async function Atributes({ ingredient, manufacturer, packing }) {
 				<h6 className={styles.h6}>Состав:</h6>
 				<ul className={styles.ingredient}>
 					{
-						ingredient.map((ingredient) => (
-							<li key={ingredient.id}>
-								<Link href={`/catalog/ingredient/${ingredient.slug}`}>
-									{ingredient.title}
+						ingredient?.map(({id, slug, title}) => (
+							<li key={id}>
+								<Link href={`/catalog/ingredient/${slug}`}>
+									{ title }
 								</Link>
 							</li>
 						))
@@ -42,12 +48,12 @@ export default async function Atributes({ ingredient, manufacturer, packing }) {
 			<section className={styles.manufacturer}>
 				<h6 className={styles.h6}>Производитель:</h6>
 				<div className={styles.item}>
-					<Link href="#">{manufacturer.map((m) => (m.title))}</Link>
+					<Link href="#">{manufacturer?.map(({title}) => (title))}</Link>
 				</div>
 			</section>
 			<section className={styles.package}>
 				<h6 className={styles.h6}>Упаковка:</h6>
-				<div className={styles.item}>{packing.map((p) => (p.title))}<span> л</span></div>
+				<div className={styles.item}>{packing?.map(({title}) => (title))}<span>л</span></div>
 			</section>
 		</>
 	)

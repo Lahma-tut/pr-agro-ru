@@ -1,8 +1,8 @@
 'use client'
+
 import Link from 'next/link'
 import styles from './search.module.css'
 import { useSearchSWR } from '@/services/fetcher'
-
 
 export default function SearchResults({ query, handleReset }) {
   const { products, isLoading, error } = useSearchSWR(query)
@@ -13,8 +13,7 @@ export default function SearchResults({ query, handleReset }) {
         {isLoading &&
           <p className={styles.results_list_item}>поиск...</p>}
 
-        {
-          !isLoading && products.length > 0 && 
+        {!isLoading && products.length > 0 && 
           products.map(item => 
             <Link 
               key={item.id} 

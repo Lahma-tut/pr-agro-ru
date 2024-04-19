@@ -46,12 +46,3 @@ p {
   text-wrap: pretty;
   padding: 0 0 11px 0;
 }
-
-.search_page {
-  padding: var(--padding);
-}
-
-.search_p {
-  margin-bottom: 30px;
-}
-

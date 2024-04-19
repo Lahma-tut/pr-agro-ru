@@ -1,12 +1,16 @@
-import Link from "next/link"
-import styles from "./headling.module.css"
+import Link from 'next/link'
+import styles from './headling.module.css'
 
+type TypeProps = {
+  category: string | undefined
+  slug?: string | undefined
+}
 
-export default function H2({ category, slug }) {
+export const H2 = ({ category, slug }: TypeProps) => {
   if (!slug) {
     return (
-      <div className={styles.body}>
-        <h2 className={styles.h2}>
+      <div className={styles.h2_body}>
+        <h2>
           <span className={styles.arrow}>&#5130; </span>
             <Link className={styles.link} href={`/catalog`}>
               { category }
@@ -16,8 +20,8 @@ export default function H2({ category, slug }) {
     )
   } else {
     return (
-      <div className={styles.body}>
-        <h2 className={styles.h2}>
+      <div className={styles.h2_body}>
+        <h2>
           <span className={styles.arrow}>&#5130; </span>
           <Link className={styles.link}
             href={`/catalog/category/${slug}`}>
@@ -27,4 +31,4 @@ export default function H2({ category, slug }) {
       </div>
     )
   }
-};
+}

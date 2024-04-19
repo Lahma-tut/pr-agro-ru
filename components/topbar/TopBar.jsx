@@ -1,4 +1,4 @@
-import styles from "./topbar.module.css";
+import styles from './topbar.module.css'
 
 export default function TopBar() {
   return (
@@ -12,5 +12,5 @@ export default function TopBar() {
           <li>Яндекс отзывы</li>
       </ul>
   </div>
-  );
+  )
 }

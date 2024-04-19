@@ -1,6 +1,10 @@
 {
   "compilerOptions": {
-    "lib": ["dom", "dom.iterable", "esnext"],
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
@@ -18,9 +22,53 @@
       }
     ],
     "paths": {
-      "@/*": ["./*"]
+      "@/*": [
+        "./*"
+      ]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "app/api/hello/route.js", "app/api/category/route.js", "app/catalog/layout.jsx", "components/breadcrumbs/Breadcrumbs.jsx", "app/catalog/page.jsx", "app/catalog/ingredient/[id]/page.jsx", "app/catalog/category/[id]/page.jsx", "app/catalog/[id]/page.jsx", "db/db.js", "components/topbar/TopBar.jsx", "components/pagination/Pagination.tjsx", "components/header/Header.jsx", "components/header/search/Search.jsx", "components/header/menu/Menu.jsx", "components/header/logo/Logo.jsx", "components/header/contacts/Contacts.jsx", "components/header/basket/Basket.jsx", "components/footer/Footer.jsx", "components/card/Price.jsx", "components/card/Counter.jsx", "components/card/Atributes.jsx", "components/aside/filter/Filter.jsx", "components/aside/analog/Analog.jsx", "app/page.jsx", "app/layout.jsx", "db/movies.js", "components/CategoryList/CategoryList.tsx", "components/CategoryList/CategoryList.tsx", "db/category.js", "db/ingredient.js", "app/api/products/index.js", "components/header/searchNew/searchResult.jsx", "components/header/searchNew/search.jsx"],
-  "exclude": ["node_modules"]
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    "app/api/hello/route.js",
+    "app/api/category/route.js",
+    "app/catalog/layout.jsx",
+    "components/breadcrumb/Breadcrumbs.jsx",
+    "app/catalog/page.tsx",
+    "app/catalog/ingredient/[id]/page.tsx",
+    "app/catalog/category/[id]/page.tsx",
+    "app/catalog/[id]/page.tsx",
+    "db/db.js",
+    "components/topbar/TopBar.jsx",
+    "components/pagination/Pagination.tjsx",
+    "components/header/Header.jsx",
+    "components/header/search/Search.jsx",
+    "components/header/menu/Menu.jsx",
+    "components/header/logo/Logo.jsx",
+    "components/header/contacts/Contacts.jsx",
+    "components/header/basket/Basket.jsx",
+    "components/footer/Footer.jsx",
+    "components/card/Price.jsx",
+    "components/card/Counter.jsx",
+    "components/card/Atributes.tsx",
+    "components/aside/filter/Filter.jsx",
+    "components/aside/analog/Analog.jsx",
+    "app/page.tsx",
+    "app/layout.tsx",
+    "db/movies.js",
+    "components/CategoryList/CategoryList.tsx",
+    "components/CategoryList/CategoryList.tsx",
+    "db/category.ts",
+    "db/ingredient.ts",
+    "app/api/products/index.js",
+    "components/header/searchNew/searchResult.jsx",
+    "components/header/searchNew/search.jsx",
+    "app/catalog/loading.ts",
+    "components/loading/loading.tsx",
+  ],
+  "exclude": [
+    "node_modules"
+  ]
 }

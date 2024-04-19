@@ -4,4 +4,4 @@ export const fetchBySearch = async (search) => {
   if (!response.ok) throw new Error("Error: Search: ")
 
   return response.json()
-};
+}

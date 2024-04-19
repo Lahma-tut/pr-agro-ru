@@ -1,15 +1,26 @@
-import Image from "next/image"
-import Link from "next/link"
-import styles from "./products.module.css"
+import Image from 'next/image'
+import Link from 'next/link'
+import styles from './products.module.css'
 
-export default function Products({ products }) {
+type Props = {
+	products: {
+    id: number;
+    slug: string;
+    title: string;
+    description: string;
+    price: number;
+	} [] | undefined
+}
+
+export default function Products({ products }: Props) {
 	return (
 		<>
-			{products.map((product) => (
+			{products?.map((product) => (
 				<Link
 					key={product.id}
 					href={`/catalog/${product.slug}`}
 					className={styles.list}>
+					
 					<div className={styles.image}>
 						<Image 
 							src="/korsar-super-vrk-10l.jpeg" 
@@ -21,14 +32,20 @@ export default function Products({ products }) {
 
 					<div className={styles.content}>
 						<h3 className={styles.h3}>
+							
 							{ product.title }
+
 							</h3>
 						<div className={styles.content_row}>
 							<div className={styles.desc}>
+								
 								{ product.description }
+
 							</div>
 							<div className={styles.price}>
+								
 								{ product.price }
+
 								<span className={styles['rub']}>₽</span>
 							</div>
 						</div>
@@ -37,4 +54,4 @@ export default function Products({ products }) {
 			))}
 		</>
 	)
-};
+}

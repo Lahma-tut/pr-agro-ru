@@ -1,3 +1,4 @@
+// применяется для поиска, search
 import useSWR from "swr"
 
 const fetcher = (...args) => fetch(...args).then(res => res.json())
@@ -13,4 +14,4 @@ export function useSearchSWR(query) {
     isLoading,
     isError: error
   }
-};
+}
